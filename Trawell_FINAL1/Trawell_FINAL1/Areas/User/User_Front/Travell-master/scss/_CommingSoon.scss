@@ -1,0 +1,102 @@
+
+	
+	#CommingSoon{
+		width:100%;
+
+		min-height:100vh;
+		background-image: url("../img/CoomingSoonBg.jpg");
+		background-position: center center;
+		background-size: cover;
+		position: relative;
+		.container-fluid{
+			padding: 30px;
+			.row{
+					.logo{
+						width: 150px;
+						position: relative;
+						z-index: 1;
+						opacity:.8;
+						transition:opacity .4s ease;
+						img{
+							
+						}
+						&:hover{
+							opacity:1;
+						}
+					}
+				.col-md-12{
+					height:100vh;
+					background: rgba(3,3,3,.5);
+					position: absolute;
+					top:0px;
+					left:0px;
+				
+					.content{
+						position: relative;
+						z-index: 5;
+						h1{
+							color:#fff;
+						}
+						.timer{
+							    padding: 5px 0;
+   								border-top: 1px solid rgba(255,255,255,0.15);
+   								border-bottom: 1px solid rgba(255,255,255,0.15);
+							li{
+								padding: 0px 15px;
+								list-style: none;
+								float: left;
+								strong{
+									font-size: 5em;
+									color:#fff;
+									font-weight: 400;
+								}
+								span{
+									color:rgba(255,255,255,0.15);
+									font-size:1.3em;
+									position: relative;
+									bottom: 15px;
+								}
+							}
+						}
+
+
+					}
+
+
+				}
+				.links{
+						.icons{
+						width: 100%;
+						position: fixed;
+						bottom:30px;
+						
+							li{
+								list-style-type: none;
+								float:left;
+								a{
+									margin: 10px;
+									text-decoration: none;
+								    width: 30px;
+								    height: 30px;
+								    line-height: 30px;
+								    text-align: center;
+								    display: block;
+								   
+								    border-radius:50%;
+								    transition: 0.3s;
+								    span{
+										 color: #fff;
+								    }
+								   
+								}
+								 a:hover span{
+									animation:bounce 1s; 
+									
+								}
+								
+							}
+						}
+					}
+			}
+		}
+	}	

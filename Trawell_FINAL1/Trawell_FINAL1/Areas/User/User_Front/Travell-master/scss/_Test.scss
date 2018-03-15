@@ -1,0 +1,32 @@
+#Test1{
+	overflow: hidden;
+	.bigC{
+	transition :all 2s ease;
+	position: relative;
+		div{
+			position: relative;
+			height: 100vh;
+		}
+		.A{
+			background-image:url("../img/afro_300x300.jpg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			
+		}
+			.B{
+			background-image:url("../img/amaze_300x300.jpg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			
+		}
+			.C{
+			background-image:url("../img/andrea_300x300.jpg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			
+		}
+	}
+}

@@ -1,0 +1,50 @@
+﻿@model Trawell_FINAL1.Models.Activity_photo
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/AdminPageView.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm("create","Activity_photo",FormMethod.Post,new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Activity_photo</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.photo_path, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.photo_path, new { htmlAttributes = new { @class = "form-control",@type="file" } })
+                @Html.ValidationMessageFor(model => model.photo_path, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        @if (Session["Erorr"] != null) {
+
+            <div class="alert alert-info">
+                @Session["Erorr"]
+            </div>
+            @( Session["Erorr"]=null)
+        }
+        <div class="form-group">
+            @Html.LabelFor(model => model.activ_id, "activ_id", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("activ_id", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.activ_id, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

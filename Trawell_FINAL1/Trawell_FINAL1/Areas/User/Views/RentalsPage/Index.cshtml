@@ -1,0 +1,522 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/UserPage.cshtml";
+}
+
+<h2>Index</h2>
+<section id="rentalSearch">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="rentalHeading">
+                    <h1>Search for Rentals</h1>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="row">
+                    <div class="Search col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="SearchInto">
+
+                            <form style="width:100%;">
+                                <div class="row">
+                                    <div class="Location col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                        <div class="form-group">
+                                            <label for="Where">Where</label>
+                                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                                <div class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                                                <input type="text" class="form-control autocomplete" id="RentalResult" value="USA, New York">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="CheckIn col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                        <div class="form-group">
+                                            <label for="CheckIn">Check In</label>
+                                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                                <div class="input-group-addon">
+                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                </div>
+                                                <input type="text" class="datepicker CheckIn form-control" id="CheckIn" value="">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="CheckOut col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                        <div class="form-group">
+                                            <label for="CheckOut">Check Out</label>
+                                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                                <div class="input-group-addon">
+                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                </div>
+                                                <input type="text" class="datepicker CheckOut form-control" id="CheckOut" value="">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class=" col-sm-12 col-md-12 col-lg-12 col-xl-12 Guests">
+                                        <div class="form-group form-group- form-group-select-plus">
+                                            <label>Guests</label>
+                                            <div class="btn-group btn-group-select-num GuestsBtnGroup" data-toggle="buttons">
+                                                <label class="btn btn-primary  active">
+                                                    <input type="radio" name="options" />1
+                                                </label>
+                                                <label class="btn btn-primary">
+                                                    <input type="radio" name="options" />2
+                                                </label>
+                                                <label class="btn btn-primary">
+                                                    <input type="radio" name="options" />3
+                                                </label>
+                                                <label class="btn btn-primary">
+                                                    <input type="radio" name="options" />4
+                                                </label>
+                                                <label class="btn btn-primary Guests5" ">
+                                                    4+
+                                                </label>
+                                            </div>
+                                            <select class="form-control GuestsSectionGroup hidden-sm-up hidden-sm-down">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option selected="selected">5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                                <option>8</option>
+                                                <option>9</option>
+                                                <option>10</option>
+                                                <option>11</option>
+                                                <option>12</option>
+                                                <option>13</option>
+                                                <option>14</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 Rooms">
+                                        <div class="form-group form-group- form-group-select-plus">
+                                            <label>Rooms</label>
+                                            <div class="btn-group btn-group-select-num RoomsBtnGroup" data-toggle="buttons">
+                                                <label class="btn btn-primary active">
+                                                    <input type="radio" name="options" />1
+                                                </label>
+                                                <label class="btn btn-primary ">
+                                                    <input type="radio" name="options" />2
+                                                </label>
+                                                <label class="btn btn-primary">
+                                                    <input type="radio" name="options" />3
+                                                </label>
+                                                <label class="btn btn-primary">
+                                                    <input type="radio" name="options" />4
+                                                </label>
+                                                <label class="btn btn-primary Rooms5">
+                                                    4+
+                                                </label>
+                                            </div>
+                                            <select class="form-control hidden-sm-up hidden-sm-down RoomsSectionGroup">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option selected="selected">5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                                <option>8</option>
+                                                <option>9</option>
+                                                <option>10</option>
+                                                <option>11</option>
+                                                <option>12</option>
+                                                <option>13</option>
+                                                <option>14</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <input class="btn color-second" type="submit" name="" value="Search Rentals">
+
+                                </div>
+                            </form>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="podHeading">
+                    <h2>Vacation Rentals in Popuplar Destinations</h2>
+                </div>
+                <div class="rentalGalery">
+                    <div class="row">
+                        <!-- birinci sira -->
+                        <div class="col-lg-4">
+                            <div class="galeryItem">
+                                <div class="galeryPhoto">
+                                    <img src="img/gaviota_en_el_top_800x600.jpg" class="img-fluid">
+                                    <div class="layoutGalery">
+                                        <div class="PhotoDescription">
+                                            <span>New York City Hotels</span>
+                                            <small>76783 rewiews</small>
+                                            <small>423 offers from $80</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="galeryItem">
+                                <div class="galeryPhoto">
+                                    <img src="img/gaviota_en_el_top_800x600.jpg" class="img-fluid">
+                                    <div class="layoutGalery">
+                                        <div class="PhotoDescription">
+                                            <span>New York City Hotels</span>
+                                            <small>76783 rewiews</small>
+                                            <small>423 offers from $80</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="galeryItem">
+                                <div class="galeryPhoto">
+                                    <img src="img/gaviota_en_el_top_800x600.jpg" class="img-fluid">
+                                    <div class="layoutGalery">
+                                        <div class="PhotoDescription">
+                                            <span>New York City Hotels</span>
+                                            <small>76783 rewiews</small>
+                                            <small>423 offers from $80</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ikinci sira -->
+                        <div class="col-lg-4">
+                            <div class="galeryItem">
+                                <div class="galeryPhoto">
+                                    <img src="img/gaviota_en_el_top_800x600.jpg" class="img-fluid">
+                                    <div class="layoutGalery">
+                                        <div class="PhotoDescription">
+                                            <span>New York City Hotels</span>
+                                            <small>76783 rewiews</small>
+                                            <small>423 offers from $80</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="galeryItem">
+                                <div class="galeryPhoto">
+                                    <img src="img/gaviota_en_el_top_800x600.jpg" class="img-fluid">
+                                    <div class="layoutGalery">
+                                        <div class="PhotoDescription">
+                                            <span>New York City Hotels</span>
+                                            <small>76783 rewiews</small>
+                                            <small>423 offers from $80</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="galeryItem">
+                                <div class="galeryPhoto">
+                                    <img src="img/gaviota_en_el_top_800x600.jpg" class="img-fluid">
+                                    <div class="layoutGalery">
+                                        <div class="PhotoDescription">
+                                            <span>New York City Hotels</span>
+                                            <small>76783 rewiews</small>
+                                            <small>423 offers from $80</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ucuncu sira -->
+                        <div class="col-lg-4">
+                            <div class="galeryItem">
+                                <div class="galeryPhoto">
+                                    <img src="img/gaviota_en_el_top_800x600.jpg" class="img-fluid">
+                                    <div class="layoutGalery">
+                                        <div class="PhotoDescription">
+                                            <span>New York City Hotels</span>
+                                            <small>76783 rewiews</small>
+                                            <small>423 offers from $80</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="galeryItem">
+                                <div class="galeryPhoto">
+                                    <img src="img/gaviota_en_el_top_800x600.jpg" class="img-fluid">
+                                    <div class="layoutGalery">
+                                        <div class="PhotoDescription">
+                                            <span>New York City Hotels</span>
+                                            <small>76783 rewiews</small>
+                                            <small>423 offers from $80</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="galeryItem">
+                                <div class="galeryPhoto">
+                                    <img src="img/gaviota_en_el_top_800x600.jpg" class="img-fluid">
+                                    <div class="layoutGalery">
+                                        <div class="PhotoDescription">
+                                            <span>New York City Hotels</span>
+                                            <small>76783 rewiews</small>
+                                            <small>423 offers from $80</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dealsGalery">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="dealsHeading">
+                                <h2>Top Deals</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="dealsGaleryItem">
+                                <div class="dealsGaleryPhoto">
+                                    <img src="img/gaviota_en_el_top_800x600.jpg" class="img-fluid">
+                                    <a class="aquaDiv" href="#">Book Now</a>
+                                </div>
+                                <div class="dealsDescription">
+                                    <a href="">Duplex Greenwich</a>
+                                    <small><i class="fa fa-map-marker"></i> Jamaica, NY (Kennedy Airport (JFK))</small>
+                                    <ul class="dealsIcon clearfix">
+                                        <li data-toggle="tooltip" data-placement="top" title="male">
+                                            <i class="fa fa-male">
+
+                                            </i><small>x 5</small>
+                                        </li>
+                                        <li data-toggle="tooltip" data-placement="top" title="male">
+                                            <i class="fa fa-bed"></i>
+                                            <small>x 3</small>
+                                        </li>
+                                        <li data-toggle="tooltip" data-placement="top" title="male"><i class="fa fa-shower"></i><small>x 2</small></li>
+                                    </ul>
+                                    <span>$263<small>/night</small></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="dealsGaleryItem">
+                                <div class="dealsGaleryPhoto">
+                                    <img src="img/gaviota_en_el_top_800x600.jpg" class="img-fluid">
+                                    <a class="aquaDiv" href="#">Book Now</a>
+                                </div>
+                                <div class="dealsDescription">
+                                    <a href="">Duplex Greenwich</a>
+                                    <small><i class="fa fa-map-marker"></i> Jamaica, NY (Kennedy Airport (JFK))</small>
+                                    <ul class="dealsIcon clearfix">
+                                        <li data-toggle="tooltip" data-placement="top" title="male">
+                                            <i class="fa fa-male">
+
+                                            </i><small>x 5</small>
+                                        </li>
+                                        <li data-toggle="tooltip" data-placement="top" title="male">
+                                            <i class="fa fa-bed"></i>
+                                            <small>x 3</small>
+                                        </li>
+                                        <li data-toggle="tooltip" data-placement="top" title="male"><i class="fa fa-shower"></i><small>x 2</small></li>
+                                    </ul>
+                                    <span>$263<small>/night</small></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="dealsGaleryItem">
+                                <div class="dealsGaleryPhoto">
+                                    <img src="img/gaviota_en_el_top_800x600.jpg" class="img-fluid">
+                                    <a class="aquaDiv" href="#">Book Now</a>
+                                </div>
+                                <div class="dealsDescription">
+                                    <a href="">Duplex Greenwich</a>
+                                    <small><i class="fa fa-map-marker"></i> Jamaica, NY (Kennedy Airport (JFK))</small>
+                                    <ul class="dealsIcon clearfix">
+                                        <li data-toggle="tooltip" data-placement="top" title="male">
+                                            <i class="fa fa-male">
+
+                                            </i><small>x 5</small>
+                                        </li>
+                                        <li data-toggle="tooltip" data-placement="top" title="male">
+                                            <i class="fa fa-bed"></i>
+                                            <small>x 3</small>
+                                        </li>
+                                        <li data-toggle="tooltip" data-placement="top" title="male"><i class="fa fa-shower"></i><small>x 2</small></li>
+                                    </ul>
+                                    <span>$263<small>/night</small></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="dealsGaleryItem">
+                                <div class="dealsGaleryPhoto">
+                                    <img src="img/gaviota_en_el_top_800x600.jpg" class="img-fluid">
+                                    <a class="aquaDiv" href="#">Book Now</a>
+                                </div>
+                                <div class="dealsDescription">
+                                    <a href="">Duplex Greenwich</a>
+                                    <small><i class="fa fa-map-marker"></i> Jamaica, NY (Kennedy Airport (JFK))</small>
+                                    <ul class="dealsIcon clearfix">
+                                        <li data-toggle="tooltip" data-placement="top" title="male">
+                                            <i class="fa fa-male">
+
+                                            </i><small>x 5</small>
+                                        </li>
+                                        <li data-toggle="tooltip" data-placement="top" title="male">
+                                            <i class="fa fa-bed"></i>
+                                            <small>x 3</small>
+                                        </li>
+                                        <li data-toggle="tooltip" data-placement="top" title="male"><i class="fa fa-shower"></i><small>x 2</small></li>
+                                    </ul>
+                                    <span>$263<small>/night</small></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="dealsGaleryItem">
+                                <div class="dealsGaleryPhoto">
+                                    <img src="img/gaviota_en_el_top_800x600.jpg" class="img-fluid">
+                                    <a class="aquaDiv" href="#">Book Now</a>
+                                </div>
+                                <div class="dealsDescription">
+                                    <a class="aquaDiv" href="#">Book Now</a>
+
+                                    <small><i class="fa fa-map-marker"></i> Jamaica, NY (Kennedy Airport (JFK))</small>
+                                    <ul class="dealsIcon clearfix">
+                                        <li data-toggle="tooltip" data-placement="top" title="male">
+                                            <i class="fa fa-male">
+
+                                            </i><small>x 5</small>
+                                        </li>
+                                        <li data-toggle="tooltip" data-placement="top" title="male">
+                                            <i class="fa fa-bed"></i>
+                                            <small>x 3</small>
+                                        </li>
+                                        <li data-toggle="tooltip" data-placement="top" title="male"><i class="fa fa-shower"></i><small>x 2</small></li>
+                                    </ul>
+                                    <span>$263<small>/night</small></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="dealsGaleryItem">
+                                <div class="dealsGaleryPhoto">
+                                    <img src="img/gaviota_en_el_top_800x600.jpg" class="img-fluid">
+                                    <a class="aquaDiv" href="#">Book Now</a>
+                                </div>
+                                <div class="dealsDescription">
+                                    <a href="">Duplex Greenwich</a>
+                                    <small><i class="fa fa-map-marker"></i> Jamaica, NY (Kennedy Airport (JFK))</small>
+                                    <ul class="dealsIcon clearfix">
+                                        <li data-toggle="tooltip" data-placement="top" title="male">
+                                            <i class="fa fa-male">
+
+                                            </i><small>x 5</small>
+                                        </li>
+                                        <li data-toggle="tooltip" data-placement="top" title="male">
+                                            <i class="fa fa-bed"></i>
+                                            <small>x 3</small>
+                                        </li>
+                                        <li data-toggle="tooltip" data-placement="top" title="male"><i class="fa fa-shower"></i><small>x 2</small></li>
+                                    </ul>
+                                    <span>$263<small>/night</small></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="dealsGaleryItem">
+                                <div class="dealsGaleryPhoto">
+                                    <img src="img/gaviota_en_el_top_800x600.jpg" class="img-fluid">
+                                    <a class="aquaDiv" href="#">Book Now</a>
+                                </div>
+                                <div class="dealsDescription">
+                                    <a href="">Duplex Greenwich</a>
+                                    <small><i class="fa fa-map-marker"></i> Jamaica, NY (Kennedy Airport (JFK))</small>
+                                    <ul class="dealsIcon clearfix">
+                                        <li data-toggle="tooltip" data-placement="top" title="male">
+                                            <i class="fa fa-male">
+
+                                            </i><small>x 5</small>
+                                        </li>
+                                        <li data-toggle="tooltip" data-placement="top" title="male">
+                                            <i class="fa fa-bed"></i>
+                                            <small>x 3</small>
+                                        </li>
+                                        <li data-toggle="tooltip" data-placement="top" title="male"><i class="fa fa-shower"></i><small>x 2</small></li>
+                                    </ul>
+                                    <span>$263<small>/night</small></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="dealsGaleryItem">
+                                <div class="dealsGaleryPhoto">
+                                    <img src="img/gaviota_en_el_top_800x600.jpg" class="img-fluid">
+                                    <a class="aquaDiv" href="#">Book Now</a>
+                                </div>
+                                <div class="dealsDescription">
+                                    <a href="">Duplex Greenwich</a>
+                                    <small><i class="fa fa-map-marker"></i> Jamaica, NY (Kennedy Airport (JFK))</small>
+                                    <ul class="dealsIcon clearfix">
+                                        <li data-toggle="tooltip" data-placement="top" title="male">
+                                            <i class="fa fa-male">
+
+                                            </i><small>x 5</small>
+                                        </li>
+                                        <li data-toggle="tooltip" data-placement="top" title="male">
+                                            <i class="fa fa-bed"></i>
+                                            <small>x 3</small>
+                                        </li>
+                                        <li data-toggle="tooltip" data-placement="top" title="male"><i class="fa fa-shower"></i><small>x 2</small></li>
+                                    </ul>
+                                    <span>$263<small>/night</small></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="dealsGaleryItem">
+                                <div class="dealsGaleryPhoto">
+                                    <img src="img/gaviota_en_el_top_800x600.jpg" class="img-fluid">
+                                    <a class="aquaDiv" href="#">Book Now</a>
+                                </div>
+                                <div class="dealsDescription">
+                                    <a href="">Duplex Greenwich</a>
+                                    <small><i class="fa fa-map-marker"></i> Jamaica, NY (Kennedy Airport (JFK))</small>
+                                    <ul class="dealsIcon clearfix">
+                                        <li data-toggle="tooltip" data-placement="top" title="male">
+                                            <i class="fa fa-male">
+
+                                            </i><small>x 5</small>
+                                        </li>
+                                        <li data-toggle="tooltip" data-placement="top" title="male">
+                                            <i class="fa fa-bed"></i>
+                                            <small>x 3</small>
+                                        </li>
+                                        <li data-toggle="tooltip" data-placement="top" title="male"><i class="fa fa-shower"></i><small>x 2</small></li>
+                                    </ul>
+                                    <span>$263<small>/night</small></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+

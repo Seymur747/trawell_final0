@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Trawell_FINAL1.Models.About>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminPageView.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.jobs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.texts)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.photos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.names)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.jobs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.texts)
+        </td>
+        <td>
+            <img src="~/Areas/Admin/Uploads/@Html.DisplayFor(modelItem => item.photos)" alt="Alternate Text" height="100" width="100" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.names)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

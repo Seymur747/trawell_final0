@@ -1,0 +1,88 @@
+﻿@model IEnumerable<Trawell_FINAL1.Models.Rental>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminPageView.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.locations)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.map)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descriptions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.owner_number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.owner_email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.owner_site)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rental_male_num)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rental_shower_num)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.locations)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.map)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descriptions)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.owner_number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.owner_email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.owner_site)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rental_male_num)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rental_shower_num)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

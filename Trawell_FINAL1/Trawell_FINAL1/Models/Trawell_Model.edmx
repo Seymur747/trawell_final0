@@ -1,0 +1,1955 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Trawell_dbaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="About">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="jobs" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="texts" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="photos" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="names" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Activities">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="activ_name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="activ_location" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="owner_email" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="owner_number" Type="int" Nullable="false" />
+          <Property Name="owner_site" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="activ_descrption" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="activ_description_heading" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="activ_price" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="activ_map" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="activ_rewies" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="activ_offers" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Activity_ActivityItems">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="activ_id" Type="int" Nullable="false" />
+          <Property Name="activItems_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Activity_Attract">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="activity_id" Type="int" Nullable="false" />
+          <Property Name="attract_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Activity_items">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="items_name" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Activity_Nightlife">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="activ_id" Type="int" Nullable="false" />
+          <Property Name="nightlife_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Activity_photo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="photo_path" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="activ_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Admin_Info">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="email" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="names" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="passwords" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Amenties">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="names" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="icon" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Attractions">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="attr_name" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Bedrooms">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="bed_num" Type="int" Nullable="false" />
+          <Property Name="rental_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Car_pickup_Option">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="names" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cars">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="car_Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="car_Price" Type="int" Nullable="false" />
+          <Property Name="car_Location" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="owner_Email" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="owner_Number" Type="int" Nullable="false" />
+          <Property Name="car_PickUpTime" Type="datetime" Nullable="false" />
+          <Property Name="car_DropOffTime" Type="datetime" Nullable="false" />
+          <Property Name="car_PickUpPlace" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="car_DropOffPlace" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="car_Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="car_grop_id" Type="int" Nullable="false" />
+          <Property Name="car_pickup_id" Type="int" Nullable="false" />
+          <Property Name="car_trans_id" Type="int" Nullable="false" />
+          <Property Name="car_engine_id" Type="int" Nullable="false" />
+          <Property Name="passabgers_num" Type="int" Nullable="false" />
+          <Property Name="car_door_num" Type="int" Nullable="false" />
+          <Property Name="car_baggage_quantity" Type="int" Nullable="false" />
+          <Property Name="car_photo" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Trawell_dbase.dbo.Cars_DefEquip' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Cars_DefEquip">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="def_equip_id" />
+            <PropertyRef Name="cars_id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="def_equip_id" Type="int" Nullable="false" />
+          <Property Name="cars_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cars_Equip">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cars_id" Type="int" Nullable="false" />
+          <Property Name="equipm_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cars_Feat">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="feat_id" Type="int" Nullable="false" />
+          <Property Name="cars_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cars_group">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="group_name" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cars_PIckupFeat">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="pickupfeat_id" Type="int" Nullable="false" />
+          <Property Name="cars_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cars_trans">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="trans_name" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Contact">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="skype" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="number" Type="int" Nullable="false" />
+          <Property Name="addresss" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="sites" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Default_Equipment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="def_name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="def_icon" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Engine">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="engine_name" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Equipment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="equipment_Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="equpment_Price" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Features">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="names" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="feat_icon" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Nightlife">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="night_name" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PickUp_Features">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="pickup_name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="pickup_icon" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Rent_Ament">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="rent_id" Type="int" Nullable="false" />
+          <Property Name="ament_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Rent_Suit">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="rent_id" Type="int" Nullable="false" />
+          <Property Name="suit_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Rental_Photo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="photo_name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="photo_path" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="rental_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Rentals">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="title" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="locations" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="map" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="descriptions" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="price" Type="int" Nullable="false" />
+          <Property Name="owner_number" Type="int" Nullable="false" />
+          <Property Name="owner_email" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="owner_site" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="rental_male_num" Type="int" Nullable="false" />
+          <Property Name="rental_shower_num" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Site_settings">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="email" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="numbers" Type="int" Nullable="false" />
+          <Property Name="loaction" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sliders">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sliderCity" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="sliderPrice" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="sliderPhoto" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Slogan">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="heading" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="descriptions" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="logo" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Subscribers">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="email" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Suitability">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="names" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="icon" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <Association Name="Activity_ActivityItems_fk0">
+          <End Role="Activities" Type="Self.Activities" Multiplicity="1" />
+          <End Role="Activity_ActivityItems" Type="Self.Activity_ActivityItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Activities">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Activity_ActivityItems">
+              <PropertyRef Name="activ_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Activity_ActivityItems_fk1">
+          <End Role="Activity_items" Type="Self.Activity_items" Multiplicity="1" />
+          <End Role="Activity_ActivityItems" Type="Self.Activity_ActivityItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Activity_items">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Activity_ActivityItems">
+              <PropertyRef Name="activItems_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Activity_Attract_fk0">
+          <End Role="Activities" Type="Self.Activities" Multiplicity="1" />
+          <End Role="Activity_Attract" Type="Self.Activity_Attract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Activities">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Activity_Attract">
+              <PropertyRef Name="activity_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Activity_Attract_fk1">
+          <End Role="Attractions" Type="Self.Attractions" Multiplicity="1" />
+          <End Role="Activity_Attract" Type="Self.Activity_Attract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Attractions">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Activity_Attract">
+              <PropertyRef Name="attract_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Activity_Nightlife_fk0">
+          <End Role="Activities" Type="Self.Activities" Multiplicity="1" />
+          <End Role="Activity_Nightlife" Type="Self.Activity_Nightlife" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Activities">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Activity_Nightlife">
+              <PropertyRef Name="activ_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Activity_Nightlife_fk1">
+          <End Role="Nightlife" Type="Self.Nightlife" Multiplicity="1" />
+          <End Role="Activity_Nightlife" Type="Self.Activity_Nightlife" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nightlife">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Activity_Nightlife">
+              <PropertyRef Name="nightlife_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Activity_photo_fk0">
+          <End Role="Activities" Type="Self.Activities" Multiplicity="1" />
+          <End Role="Activity_photo" Type="Self.Activity_photo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Activities">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Activity_photo">
+              <PropertyRef Name="activ_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Bedrooms_fk0">
+          <End Role="Rentals" Type="Self.Rentals" Multiplicity="1" />
+          <End Role="Bedrooms" Type="Self.Bedrooms" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rentals">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Bedrooms">
+              <PropertyRef Name="rental_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Cars_DefEquip_fk0">
+          <End Role="Default_Equipment" Type="Self.Default_Equipment" Multiplicity="1" />
+          <End Role="Cars_DefEquip" Type="Self.Cars_DefEquip" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Default_Equipment">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cars_DefEquip">
+              <PropertyRef Name="def_equip_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Cars_DefEquip_fk1">
+          <End Role="Cars" Type="Self.Cars" Multiplicity="1" />
+          <End Role="Cars_DefEquip" Type="Self.Cars_DefEquip" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cars">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cars_DefEquip">
+              <PropertyRef Name="cars_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Cars_Equip_fk0">
+          <End Role="Cars" Type="Self.Cars" Multiplicity="1" />
+          <End Role="Cars_Equip" Type="Self.Cars_Equip" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cars">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cars_Equip">
+              <PropertyRef Name="cars_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Cars_Equip_fk1">
+          <End Role="Equipment" Type="Self.Equipment" Multiplicity="1" />
+          <End Role="Cars_Equip" Type="Self.Cars_Equip" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Equipment">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cars_Equip">
+              <PropertyRef Name="equipm_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Cars_Feat_fk0">
+          <End Role="Features" Type="Self.Features" Multiplicity="1" />
+          <End Role="Cars_Feat" Type="Self.Cars_Feat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Features">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cars_Feat">
+              <PropertyRef Name="feat_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Cars_Feat_fk1">
+          <End Role="Cars" Type="Self.Cars" Multiplicity="1" />
+          <End Role="Cars_Feat" Type="Self.Cars_Feat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cars">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cars_Feat">
+              <PropertyRef Name="cars_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Cars_fk0">
+          <End Role="Cars_group" Type="Self.Cars_group" Multiplicity="1" />
+          <End Role="Cars" Type="Self.Cars" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cars_group">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cars">
+              <PropertyRef Name="car_grop_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Cars_fk1">
+          <End Role="Car_pickup_Option" Type="Self.Car_pickup_Option" Multiplicity="1" />
+          <End Role="Cars" Type="Self.Cars" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Car_pickup_Option">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cars">
+              <PropertyRef Name="car_pickup_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Cars_fk2">
+          <End Role="Cars_trans" Type="Self.Cars_trans" Multiplicity="1" />
+          <End Role="Cars" Type="Self.Cars" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cars_trans">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cars">
+              <PropertyRef Name="car_trans_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Cars_fk3">
+          <End Role="Engine" Type="Self.Engine" Multiplicity="1" />
+          <End Role="Cars" Type="Self.Cars" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Engine">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cars">
+              <PropertyRef Name="car_engine_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Cars_PIckupFeat_fk0">
+          <End Role="PickUp_Features" Type="Self.PickUp_Features" Multiplicity="1" />
+          <End Role="Cars_PIckupFeat" Type="Self.Cars_PIckupFeat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PickUp_Features">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cars_PIckupFeat">
+              <PropertyRef Name="pickupfeat_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Cars_PIckupFeat_fk1">
+          <End Role="Cars" Type="Self.Cars" Multiplicity="1" />
+          <End Role="Cars_PIckupFeat" Type="Self.Cars_PIckupFeat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cars">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cars_PIckupFeat">
+              <PropertyRef Name="cars_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Rent_Ament_fk0">
+          <End Role="Rentals" Type="Self.Rentals" Multiplicity="1" />
+          <End Role="Rent_Ament" Type="Self.Rent_Ament" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rentals">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Rent_Ament">
+              <PropertyRef Name="rent_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Rent_Ament_fk1">
+          <End Role="Amenties" Type="Self.Amenties" Multiplicity="1" />
+          <End Role="Rent_Ament" Type="Self.Rent_Ament" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Amenties">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Rent_Ament">
+              <PropertyRef Name="ament_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Rent_Suit_fk0">
+          <End Role="Rentals" Type="Self.Rentals" Multiplicity="1" />
+          <End Role="Rent_Suit" Type="Self.Rent_Suit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rentals">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Rent_Suit">
+              <PropertyRef Name="rent_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Rent_Suit_fk1">
+          <End Role="Suitability" Type="Self.Suitability" Multiplicity="1" />
+          <End Role="Rent_Suit" Type="Self.Rent_Suit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Suitability">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Rent_Suit">
+              <PropertyRef Name="suit_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Rental_Photo_fk0">
+          <End Role="Rentals" Type="Self.Rentals" Multiplicity="1" />
+          <End Role="Rental_Photo" Type="Self.Rental_Photo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rentals">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Rental_Photo">
+              <PropertyRef Name="rental_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Trawell_dbaseModelStoreContainer">
+          <EntitySet Name="About" EntityType="Self.About" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Activities" EntityType="Self.Activities" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Activity_ActivityItems" EntityType="Self.Activity_ActivityItems" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Activity_Attract" EntityType="Self.Activity_Attract" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Activity_items" EntityType="Self.Activity_items" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Activity_Nightlife" EntityType="Self.Activity_Nightlife" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Activity_photo" EntityType="Self.Activity_photo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Admin_Info" EntityType="Self.Admin_Info" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Amenties" EntityType="Self.Amenties" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Attractions" EntityType="Self.Attractions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Bedrooms" EntityType="Self.Bedrooms" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Car_pickup_Option" EntityType="Self.Car_pickup_Option" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cars" EntityType="Self.Cars" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cars_Equip" EntityType="Self.Cars_Equip" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cars_Feat" EntityType="Self.Cars_Feat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cars_group" EntityType="Self.Cars_group" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cars_PIckupFeat" EntityType="Self.Cars_PIckupFeat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cars_trans" EntityType="Self.Cars_trans" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Default_Equipment" EntityType="Self.Default_Equipment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Engine" EntityType="Self.Engine" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Equipment" EntityType="Self.Equipment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Features" EntityType="Self.Features" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Nightlife" EntityType="Self.Nightlife" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PickUp_Features" EntityType="Self.PickUp_Features" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Rent_Ament" EntityType="Self.Rent_Ament" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Rent_Suit" EntityType="Self.Rent_Suit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Rental_Photo" EntityType="Self.Rental_Photo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Rentals" EntityType="Self.Rentals" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Site_settings" EntityType="Self.Site_settings" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sliders" EntityType="Self.Sliders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Slogan" EntityType="Self.Slogan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Subscribers" EntityType="Self.Subscribers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Suitability" EntityType="Self.Suitability" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cars_DefEquip" EntityType="Self.Cars_DefEquip" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Cars_DefEquip].[id] AS [id], 
+    [Cars_DefEquip].[def_equip_id] AS [def_equip_id], 
+    [Cars_DefEquip].[cars_id] AS [cars_id]
+    FROM [dbo].[Cars_DefEquip] AS [Cars_DefEquip]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="Activity_ActivityItems_fk0" Association="Self.Activity_ActivityItems_fk0">
+            <End Role="Activities" EntitySet="Activities" />
+            <End Role="Activity_ActivityItems" EntitySet="Activity_ActivityItems" />
+          </AssociationSet>
+          <AssociationSet Name="Activity_ActivityItems_fk1" Association="Self.Activity_ActivityItems_fk1">
+            <End Role="Activity_items" EntitySet="Activity_items" />
+            <End Role="Activity_ActivityItems" EntitySet="Activity_ActivityItems" />
+          </AssociationSet>
+          <AssociationSet Name="Activity_Attract_fk0" Association="Self.Activity_Attract_fk0">
+            <End Role="Activities" EntitySet="Activities" />
+            <End Role="Activity_Attract" EntitySet="Activity_Attract" />
+          </AssociationSet>
+          <AssociationSet Name="Activity_Attract_fk1" Association="Self.Activity_Attract_fk1">
+            <End Role="Attractions" EntitySet="Attractions" />
+            <End Role="Activity_Attract" EntitySet="Activity_Attract" />
+          </AssociationSet>
+          <AssociationSet Name="Activity_Nightlife_fk0" Association="Self.Activity_Nightlife_fk0">
+            <End Role="Activities" EntitySet="Activities" />
+            <End Role="Activity_Nightlife" EntitySet="Activity_Nightlife" />
+          </AssociationSet>
+          <AssociationSet Name="Activity_Nightlife_fk1" Association="Self.Activity_Nightlife_fk1">
+            <End Role="Nightlife" EntitySet="Nightlife" />
+            <End Role="Activity_Nightlife" EntitySet="Activity_Nightlife" />
+          </AssociationSet>
+          <AssociationSet Name="Activity_photo_fk0" Association="Self.Activity_photo_fk0">
+            <End Role="Activities" EntitySet="Activities" />
+            <End Role="Activity_photo" EntitySet="Activity_photo" />
+          </AssociationSet>
+          <AssociationSet Name="Bedrooms_fk0" Association="Self.Bedrooms_fk0">
+            <End Role="Rentals" EntitySet="Rentals" />
+            <End Role="Bedrooms" EntitySet="Bedrooms" />
+          </AssociationSet>
+          <AssociationSet Name="Cars_DefEquip_fk0" Association="Self.Cars_DefEquip_fk0">
+            <End Role="Default_Equipment" EntitySet="Default_Equipment" />
+            <End Role="Cars_DefEquip" EntitySet="Cars_DefEquip" />
+          </AssociationSet>
+          <AssociationSet Name="Cars_DefEquip_fk1" Association="Self.Cars_DefEquip_fk1">
+            <End Role="Cars" EntitySet="Cars" />
+            <End Role="Cars_DefEquip" EntitySet="Cars_DefEquip" />
+          </AssociationSet>
+          <AssociationSet Name="Cars_Equip_fk0" Association="Self.Cars_Equip_fk0">
+            <End Role="Cars" EntitySet="Cars" />
+            <End Role="Cars_Equip" EntitySet="Cars_Equip" />
+          </AssociationSet>
+          <AssociationSet Name="Cars_Equip_fk1" Association="Self.Cars_Equip_fk1">
+            <End Role="Equipment" EntitySet="Equipment" />
+            <End Role="Cars_Equip" EntitySet="Cars_Equip" />
+          </AssociationSet>
+          <AssociationSet Name="Cars_Feat_fk0" Association="Self.Cars_Feat_fk0">
+            <End Role="Features" EntitySet="Features" />
+            <End Role="Cars_Feat" EntitySet="Cars_Feat" />
+          </AssociationSet>
+          <AssociationSet Name="Cars_Feat_fk1" Association="Self.Cars_Feat_fk1">
+            <End Role="Cars" EntitySet="Cars" />
+            <End Role="Cars_Feat" EntitySet="Cars_Feat" />
+          </AssociationSet>
+          <AssociationSet Name="Cars_fk0" Association="Self.Cars_fk0">
+            <End Role="Cars_group" EntitySet="Cars_group" />
+            <End Role="Cars" EntitySet="Cars" />
+          </AssociationSet>
+          <AssociationSet Name="Cars_fk1" Association="Self.Cars_fk1">
+            <End Role="Car_pickup_Option" EntitySet="Car_pickup_Option" />
+            <End Role="Cars" EntitySet="Cars" />
+          </AssociationSet>
+          <AssociationSet Name="Cars_fk2" Association="Self.Cars_fk2">
+            <End Role="Cars_trans" EntitySet="Cars_trans" />
+            <End Role="Cars" EntitySet="Cars" />
+          </AssociationSet>
+          <AssociationSet Name="Cars_fk3" Association="Self.Cars_fk3">
+            <End Role="Engine" EntitySet="Engine" />
+            <End Role="Cars" EntitySet="Cars" />
+          </AssociationSet>
+          <AssociationSet Name="Cars_PIckupFeat_fk0" Association="Self.Cars_PIckupFeat_fk0">
+            <End Role="PickUp_Features" EntitySet="PickUp_Features" />
+            <End Role="Cars_PIckupFeat" EntitySet="Cars_PIckupFeat" />
+          </AssociationSet>
+          <AssociationSet Name="Cars_PIckupFeat_fk1" Association="Self.Cars_PIckupFeat_fk1">
+            <End Role="Cars" EntitySet="Cars" />
+            <End Role="Cars_PIckupFeat" EntitySet="Cars_PIckupFeat" />
+          </AssociationSet>
+          <AssociationSet Name="Rent_Ament_fk0" Association="Self.Rent_Ament_fk0">
+            <End Role="Rentals" EntitySet="Rentals" />
+            <End Role="Rent_Ament" EntitySet="Rent_Ament" />
+          </AssociationSet>
+          <AssociationSet Name="Rent_Ament_fk1" Association="Self.Rent_Ament_fk1">
+            <End Role="Amenties" EntitySet="Amenties" />
+            <End Role="Rent_Ament" EntitySet="Rent_Ament" />
+          </AssociationSet>
+          <AssociationSet Name="Rent_Suit_fk0" Association="Self.Rent_Suit_fk0">
+            <End Role="Rentals" EntitySet="Rentals" />
+            <End Role="Rent_Suit" EntitySet="Rent_Suit" />
+          </AssociationSet>
+          <AssociationSet Name="Rent_Suit_fk1" Association="Self.Rent_Suit_fk1">
+            <End Role="Suitability" EntitySet="Suitability" />
+            <End Role="Rent_Suit" EntitySet="Rent_Suit" />
+          </AssociationSet>
+          <AssociationSet Name="Rental_Photo_fk0" Association="Self.Rental_Photo_fk0">
+            <End Role="Rentals" EntitySet="Rentals" />
+            <End Role="Rental_Photo" EntitySet="Rental_Photo" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Trawell_dbaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="About">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="jobs" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="texts" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="photos" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="names" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Activity">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="activ_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="activ_location" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="owner_email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="owner_number" Type="Int32" Nullable="false" />
+          <Property Name="owner_site" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="activ_descrption" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="activ_description_heading" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="activ_price" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="activ_map" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="activ_rewies" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="activ_offers" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Activity_ActivityItems" Relationship="Self.Activity_ActivityItems_fk0" FromRole="Activities" ToRole="Activity_ActivityItems" />
+          <NavigationProperty Name="Activity_Attract" Relationship="Self.Activity_Attract_fk0" FromRole="Activities" ToRole="Activity_Attract" />
+          <NavigationProperty Name="Activity_Nightlife" Relationship="Self.Activity_Nightlife_fk0" FromRole="Activities" ToRole="Activity_Nightlife" />
+          <NavigationProperty Name="Activity_photo" Relationship="Self.Activity_photo_fk0" FromRole="Activities" ToRole="Activity_photo" />
+        </EntityType>
+        <EntityType Name="Activity_ActivityItems">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="activ_id" Type="Int32" Nullable="false" />
+          <Property Name="activItems_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Activity" Relationship="Self.Activity_ActivityItems_fk0" FromRole="Activity_ActivityItems" ToRole="Activities" />
+          <NavigationProperty Name="Activity_items" Relationship="Self.Activity_ActivityItems_fk1" FromRole="Activity_ActivityItems" ToRole="Activity_items" />
+        </EntityType>
+        <EntityType Name="Activity_Attract">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="activity_id" Type="Int32" Nullable="false" />
+          <Property Name="attract_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Activity" Relationship="Self.Activity_Attract_fk0" FromRole="Activity_Attract" ToRole="Activities" />
+          <NavigationProperty Name="Attraction" Relationship="Self.Activity_Attract_fk1" FromRole="Activity_Attract" ToRole="Attractions" />
+        </EntityType>
+        <EntityType Name="Activity_items">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="items_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Activity_ActivityItems" Relationship="Self.Activity_ActivityItems_fk1" FromRole="Activity_items" ToRole="Activity_ActivityItems" />
+        </EntityType>
+        <EntityType Name="Activity_Nightlife">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="activ_id" Type="Int32" Nullable="false" />
+          <Property Name="nightlife_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Activity" Relationship="Self.Activity_Nightlife_fk0" FromRole="Activity_Nightlife" ToRole="Activities" />
+          <NavigationProperty Name="Nightlife" Relationship="Self.Activity_Nightlife_fk1" FromRole="Activity_Nightlife" ToRole="Nightlife" />
+        </EntityType>
+        <EntityType Name="Activity_photo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="photo_path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="activ_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Activity" Relationship="Self.Activity_photo_fk0" FromRole="Activity_photo" ToRole="Activities" />
+        </EntityType>
+        <EntityType Name="Admin_Info">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="names" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="passwords" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Amenty">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="names" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="icon" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Rent_Ament" Relationship="Self.Rent_Ament_fk1" FromRole="Amenties" ToRole="Rent_Ament" />
+        </EntityType>
+        <EntityType Name="Attraction">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="attr_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Activity_Attract" Relationship="Self.Activity_Attract_fk1" FromRole="Attractions" ToRole="Activity_Attract" />
+        </EntityType>
+        <EntityType Name="Bedroom">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="bed_num" Type="Int32" Nullable="false" />
+          <Property Name="rental_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Rental" Relationship="Self.Bedrooms_fk0" FromRole="Bedrooms" ToRole="Rentals" />
+        </EntityType>
+        <EntityType Name="Car_pickup_Option">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="names" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Cars" Relationship="Self.Cars_fk1" FromRole="Car_pickup_Option" ToRole="Cars" />
+        </EntityType>
+        <EntityType Name="Car">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="car_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="car_Price" Type="Int32" Nullable="false" />
+          <Property Name="car_Location" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="owner_Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="owner_Number" Type="Int32" Nullable="false" />
+          <Property Name="car_PickUpTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="car_DropOffTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="car_PickUpPlace" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="car_DropOffPlace" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="car_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="car_grop_id" Type="Int32" Nullable="false" />
+          <Property Name="car_pickup_id" Type="Int32" Nullable="false" />
+          <Property Name="car_trans_id" Type="Int32" Nullable="false" />
+          <Property Name="car_engine_id" Type="Int32" Nullable="false" />
+          <Property Name="passabgers_num" Type="Int32" Nullable="false" />
+          <Property Name="car_door_num" Type="Int32" Nullable="false" />
+          <Property Name="car_baggage_quantity" Type="Int32" Nullable="false" />
+          <Property Name="car_photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Car_pickup_Option" Relationship="Self.Cars_fk1" FromRole="Cars" ToRole="Car_pickup_Option" />
+          <NavigationProperty Name="Cars_DefEquip" Relationship="Self.Cars_DefEquip_fk1" FromRole="Cars" ToRole="Cars_DefEquip" />
+          <NavigationProperty Name="Cars_Equip" Relationship="Self.Cars_Equip_fk0" FromRole="Cars" ToRole="Cars_Equip" />
+          <NavigationProperty Name="Cars_Feat" Relationship="Self.Cars_Feat_fk1" FromRole="Cars" ToRole="Cars_Feat" />
+          <NavigationProperty Name="Cars_group" Relationship="Self.Cars_fk0" FromRole="Cars" ToRole="Cars_group" />
+          <NavigationProperty Name="Cars_trans" Relationship="Self.Cars_fk2" FromRole="Cars" ToRole="Cars_trans" />
+          <NavigationProperty Name="Engine" Relationship="Self.Cars_fk3" FromRole="Cars" ToRole="Engine" />
+          <NavigationProperty Name="Cars_PIckupFeat" Relationship="Self.Cars_PIckupFeat_fk1" FromRole="Cars" ToRole="Cars_PIckupFeat" />
+        </EntityType>
+        <EntityType Name="Cars_Equip">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cars_id" Type="Int32" Nullable="false" />
+          <Property Name="equipm_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Car" Relationship="Self.Cars_Equip_fk0" FromRole="Cars_Equip" ToRole="Cars" />
+          <NavigationProperty Name="Equipment" Relationship="Self.Cars_Equip_fk1" FromRole="Cars_Equip" ToRole="Equipment" />
+        </EntityType>
+        <EntityType Name="Cars_Feat">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="feat_id" Type="Int32" Nullable="false" />
+          <Property Name="cars_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Car" Relationship="Self.Cars_Feat_fk1" FromRole="Cars_Feat" ToRole="Cars" />
+          <NavigationProperty Name="Feature" Relationship="Self.Cars_Feat_fk0" FromRole="Cars_Feat" ToRole="Features" />
+        </EntityType>
+        <EntityType Name="Cars_group">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="group_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Cars" Relationship="Self.Cars_fk0" FromRole="Cars_group" ToRole="Cars" />
+        </EntityType>
+        <EntityType Name="Cars_PIckupFeat">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="pickupfeat_id" Type="Int32" Nullable="false" />
+          <Property Name="cars_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Car" Relationship="Self.Cars_PIckupFeat_fk1" FromRole="Cars_PIckupFeat" ToRole="Cars" />
+          <NavigationProperty Name="PickUp_Features" Relationship="Self.Cars_PIckupFeat_fk0" FromRole="Cars_PIckupFeat" ToRole="PickUp_Features" />
+        </EntityType>
+        <EntityType Name="Cars_trans">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="trans_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Cars" Relationship="Self.Cars_fk2" FromRole="Cars_trans" ToRole="Cars" />
+        </EntityType>
+        <EntityType Name="Contact">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="skype" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="number" Type="Int32" Nullable="false" />
+          <Property Name="addresss" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="sites" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Default_Equipment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="def_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="def_icon" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Cars_DefEquip" Relationship="Self.Cars_DefEquip_fk0" FromRole="Default_Equipment" ToRole="Cars_DefEquip" />
+        </EntityType>
+        <EntityType Name="Engine">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="engine_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Cars" Relationship="Self.Cars_fk3" FromRole="Engine" ToRole="Cars" />
+        </EntityType>
+        <EntityType Name="Equipment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="equipment_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="equpment_Price" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Cars_Equip" Relationship="Self.Cars_Equip_fk1" FromRole="Equipment" ToRole="Cars_Equip" />
+        </EntityType>
+        <EntityType Name="Feature">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="names" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="feat_icon" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Cars_Feat" Relationship="Self.Cars_Feat_fk0" FromRole="Features" ToRole="Cars_Feat" />
+        </EntityType>
+        <EntityType Name="Nightlife">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="night_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Activity_Nightlife" Relationship="Self.Activity_Nightlife_fk1" FromRole="Nightlife" ToRole="Activity_Nightlife" />
+        </EntityType>
+        <EntityType Name="PickUp_Features">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="pickup_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="pickup_icon" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Cars_PIckupFeat" Relationship="Self.Cars_PIckupFeat_fk0" FromRole="PickUp_Features" ToRole="Cars_PIckupFeat" />
+        </EntityType>
+        <EntityType Name="Rent_Ament">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="rent_id" Type="Int32" Nullable="false" />
+          <Property Name="ament_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Amenty" Relationship="Self.Rent_Ament_fk1" FromRole="Rent_Ament" ToRole="Amenties" />
+          <NavigationProperty Name="Rental" Relationship="Self.Rent_Ament_fk0" FromRole="Rent_Ament" ToRole="Rentals" />
+        </EntityType>
+        <EntityType Name="Rent_Suit">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="rent_id" Type="Int32" Nullable="false" />
+          <Property Name="suit_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Rental" Relationship="Self.Rent_Suit_fk0" FromRole="Rent_Suit" ToRole="Rentals" />
+          <NavigationProperty Name="Suitability" Relationship="Self.Rent_Suit_fk1" FromRole="Rent_Suit" ToRole="Suitability" />
+        </EntityType>
+        <EntityType Name="Rental_Photo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="photo_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="photo_path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="rental_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Rental" Relationship="Self.Rental_Photo_fk0" FromRole="Rental_Photo" ToRole="Rentals" />
+        </EntityType>
+        <EntityType Name="Rental">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="locations" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="map" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="descriptions" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="price" Type="Int32" Nullable="false" />
+          <Property Name="owner_number" Type="Int32" Nullable="false" />
+          <Property Name="owner_email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="owner_site" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="rental_male_num" Type="Int32" Nullable="false" />
+          <Property Name="rental_shower_num" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Bedrooms" Relationship="Self.Bedrooms_fk0" FromRole="Rentals" ToRole="Bedrooms" />
+          <NavigationProperty Name="Rent_Ament" Relationship="Self.Rent_Ament_fk0" FromRole="Rentals" ToRole="Rent_Ament" />
+          <NavigationProperty Name="Rent_Suit" Relationship="Self.Rent_Suit_fk0" FromRole="Rentals" ToRole="Rent_Suit" />
+          <NavigationProperty Name="Rental_Photo" Relationship="Self.Rental_Photo_fk0" FromRole="Rentals" ToRole="Rental_Photo" />
+        </EntityType>
+        <EntityType Name="Site_settings">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="numbers" Type="Int32" Nullable="false" />
+          <Property Name="loaction" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Slider">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sliderCity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="sliderPrice" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="sliderPhoto" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Slogan">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="heading" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="descriptions" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="logo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Subscriber">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Suitability">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="names" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="icon" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Rent_Suit" Relationship="Self.Rent_Suit_fk1" FromRole="Suitability" ToRole="Rent_Suit" />
+        </EntityType>
+        <EntityType Name="Cars_DefEquip">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="def_equip_id" />
+            <PropertyRef Name="cars_id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="def_equip_id" Type="Int32" Nullable="false" />
+          <Property Name="cars_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Car" Relationship="Self.Cars_DefEquip_fk1" FromRole="Cars_DefEquip" ToRole="Cars" />
+          <NavigationProperty Name="Default_Equipment" Relationship="Self.Cars_DefEquip_fk0" FromRole="Cars_DefEquip" ToRole="Default_Equipment" />
+        </EntityType>
+        <Association Name="Activity_ActivityItems_fk0">
+          <End Role="Activities" Type="Self.Activity" Multiplicity="1" />
+          <End Role="Activity_ActivityItems" Type="Self.Activity_ActivityItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Activities">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Activity_ActivityItems">
+              <PropertyRef Name="activ_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Activity_Attract_fk0">
+          <End Role="Activities" Type="Self.Activity" Multiplicity="1" />
+          <End Role="Activity_Attract" Type="Self.Activity_Attract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Activities">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Activity_Attract">
+              <PropertyRef Name="activity_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Activity_Nightlife_fk0">
+          <End Role="Activities" Type="Self.Activity" Multiplicity="1" />
+          <End Role="Activity_Nightlife" Type="Self.Activity_Nightlife" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Activities">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Activity_Nightlife">
+              <PropertyRef Name="activ_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Activity_photo_fk0">
+          <End Role="Activities" Type="Self.Activity" Multiplicity="1" />
+          <End Role="Activity_photo" Type="Self.Activity_photo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Activities">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Activity_photo">
+              <PropertyRef Name="activ_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Activity_ActivityItems_fk1">
+          <End Role="Activity_items" Type="Self.Activity_items" Multiplicity="1" />
+          <End Role="Activity_ActivityItems" Type="Self.Activity_ActivityItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Activity_items">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Activity_ActivityItems">
+              <PropertyRef Name="activItems_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Activity_Attract_fk1">
+          <End Role="Attractions" Type="Self.Attraction" Multiplicity="1" />
+          <End Role="Activity_Attract" Type="Self.Activity_Attract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Attractions">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Activity_Attract">
+              <PropertyRef Name="attract_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Activity_Nightlife_fk1">
+          <End Role="Nightlife" Type="Self.Nightlife" Multiplicity="1" />
+          <End Role="Activity_Nightlife" Type="Self.Activity_Nightlife" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nightlife">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Activity_Nightlife">
+              <PropertyRef Name="nightlife_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Rent_Ament_fk1">
+          <End Role="Amenties" Type="Self.Amenty" Multiplicity="1" />
+          <End Role="Rent_Ament" Type="Self.Rent_Ament" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Amenties">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Rent_Ament">
+              <PropertyRef Name="ament_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Bedrooms_fk0">
+          <End Role="Rentals" Type="Self.Rental" Multiplicity="1" />
+          <End Role="Bedrooms" Type="Self.Bedroom" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rentals">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Bedrooms">
+              <PropertyRef Name="rental_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Cars_fk1">
+          <End Role="Car_pickup_Option" Type="Self.Car_pickup_Option" Multiplicity="1" />
+          <End Role="Cars" Type="Self.Car" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Car_pickup_Option">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cars">
+              <PropertyRef Name="car_pickup_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Cars_DefEquip_fk1">
+          <End Role="Cars" Type="Self.Car" Multiplicity="1" />
+          <End Role="Cars_DefEquip" Type="Self.Cars_DefEquip" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cars">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cars_DefEquip">
+              <PropertyRef Name="cars_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Cars_Equip_fk0">
+          <End Role="Cars" Type="Self.Car" Multiplicity="1" />
+          <End Role="Cars_Equip" Type="Self.Cars_Equip" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cars">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cars_Equip">
+              <PropertyRef Name="cars_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Cars_Feat_fk1">
+          <End Role="Cars" Type="Self.Car" Multiplicity="1" />
+          <End Role="Cars_Feat" Type="Self.Cars_Feat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cars">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cars_Feat">
+              <PropertyRef Name="cars_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Cars_fk0">
+          <End Role="Cars_group" Type="Self.Cars_group" Multiplicity="1" />
+          <End Role="Cars" Type="Self.Car" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cars_group">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cars">
+              <PropertyRef Name="car_grop_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Cars_fk2">
+          <End Role="Cars_trans" Type="Self.Cars_trans" Multiplicity="1" />
+          <End Role="Cars" Type="Self.Car" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cars_trans">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cars">
+              <PropertyRef Name="car_trans_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Cars_fk3">
+          <End Role="Engine" Type="Self.Engine" Multiplicity="1" />
+          <End Role="Cars" Type="Self.Car" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Engine">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cars">
+              <PropertyRef Name="car_engine_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Cars_PIckupFeat_fk1">
+          <End Role="Cars" Type="Self.Car" Multiplicity="1" />
+          <End Role="Cars_PIckupFeat" Type="Self.Cars_PIckupFeat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cars">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cars_PIckupFeat">
+              <PropertyRef Name="cars_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Cars_Equip_fk1">
+          <End Role="Equipment" Type="Self.Equipment" Multiplicity="1" />
+          <End Role="Cars_Equip" Type="Self.Cars_Equip" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Equipment">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cars_Equip">
+              <PropertyRef Name="equipm_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Cars_Feat_fk0">
+          <End Role="Features" Type="Self.Feature" Multiplicity="1" />
+          <End Role="Cars_Feat" Type="Self.Cars_Feat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Features">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cars_Feat">
+              <PropertyRef Name="feat_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Cars_PIckupFeat_fk0">
+          <End Role="PickUp_Features" Type="Self.PickUp_Features" Multiplicity="1" />
+          <End Role="Cars_PIckupFeat" Type="Self.Cars_PIckupFeat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PickUp_Features">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cars_PIckupFeat">
+              <PropertyRef Name="pickupfeat_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Cars_DefEquip_fk0">
+          <End Role="Default_Equipment" Type="Self.Default_Equipment" Multiplicity="1" />
+          <End Role="Cars_DefEquip" Type="Self.Cars_DefEquip" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Default_Equipment">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cars_DefEquip">
+              <PropertyRef Name="def_equip_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Rent_Ament_fk0">
+          <End Role="Rentals" Type="Self.Rental" Multiplicity="1" />
+          <End Role="Rent_Ament" Type="Self.Rent_Ament" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rentals">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Rent_Ament">
+              <PropertyRef Name="rent_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Rent_Suit_fk0">
+          <End Role="Rentals" Type="Self.Rental" Multiplicity="1" />
+          <End Role="Rent_Suit" Type="Self.Rent_Suit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rentals">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Rent_Suit">
+              <PropertyRef Name="rent_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Rent_Suit_fk1">
+          <End Role="Suitability" Type="Self.Suitability" Multiplicity="1" />
+          <End Role="Rent_Suit" Type="Self.Rent_Suit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Suitability">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Rent_Suit">
+              <PropertyRef Name="suit_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Rental_Photo_fk0">
+          <End Role="Rentals" Type="Self.Rental" Multiplicity="1" />
+          <End Role="Rental_Photo" Type="Self.Rental_Photo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rentals">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Rental_Photo">
+              <PropertyRef Name="rental_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Trawell_DbaseEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Abouts" EntityType="Self.About" />
+          <EntitySet Name="Activities" EntityType="Self.Activity" />
+          <EntitySet Name="Activity_ActivityItems" EntityType="Self.Activity_ActivityItems" />
+          <EntitySet Name="Activity_Attract" EntityType="Self.Activity_Attract" />
+          <EntitySet Name="Activity_items" EntityType="Self.Activity_items" />
+          <EntitySet Name="Activity_Nightlife" EntityType="Self.Activity_Nightlife" />
+          <EntitySet Name="Activity_photo" EntityType="Self.Activity_photo" />
+          <EntitySet Name="Admin_Info" EntityType="Self.Admin_Info" />
+          <EntitySet Name="Amenties" EntityType="Self.Amenty" />
+          <EntitySet Name="Attractions" EntityType="Self.Attraction" />
+          <EntitySet Name="Bedrooms" EntityType="Self.Bedroom" />
+          <EntitySet Name="Car_pickup_Option" EntityType="Self.Car_pickup_Option" />
+          <EntitySet Name="Cars" EntityType="Self.Car" />
+          <EntitySet Name="Cars_Equip" EntityType="Self.Cars_Equip" />
+          <EntitySet Name="Cars_Feat" EntityType="Self.Cars_Feat" />
+          <EntitySet Name="Cars_group" EntityType="Self.Cars_group" />
+          <EntitySet Name="Cars_PIckupFeat" EntityType="Self.Cars_PIckupFeat" />
+          <EntitySet Name="Cars_trans" EntityType="Self.Cars_trans" />
+          <EntitySet Name="Contacts" EntityType="Self.Contact" />
+          <EntitySet Name="Default_Equipment" EntityType="Self.Default_Equipment" />
+          <EntitySet Name="Engines" EntityType="Self.Engine" />
+          <EntitySet Name="Equipments" EntityType="Self.Equipment" />
+          <EntitySet Name="Features" EntityType="Self.Feature" />
+          <EntitySet Name="Nightlives" EntityType="Self.Nightlife" />
+          <EntitySet Name="PickUp_Features" EntityType="Self.PickUp_Features" />
+          <EntitySet Name="Rent_Ament" EntityType="Self.Rent_Ament" />
+          <EntitySet Name="Rent_Suit" EntityType="Self.Rent_Suit" />
+          <EntitySet Name="Rental_Photo" EntityType="Self.Rental_Photo" />
+          <EntitySet Name="Rentals" EntityType="Self.Rental" />
+          <EntitySet Name="Site_settings" EntityType="Self.Site_settings" />
+          <EntitySet Name="Sliders" EntityType="Self.Slider" />
+          <EntitySet Name="Slogans" EntityType="Self.Slogan" />
+          <EntitySet Name="Subscribers" EntityType="Self.Subscriber" />
+          <EntitySet Name="Suitabilities" EntityType="Self.Suitability" />
+          <EntitySet Name="Cars_DefEquip" EntityType="Self.Cars_DefEquip" />
+          <AssociationSet Name="Activity_ActivityItems_fk0" Association="Self.Activity_ActivityItems_fk0">
+            <End Role="Activities" EntitySet="Activities" />
+            <End Role="Activity_ActivityItems" EntitySet="Activity_ActivityItems" />
+          </AssociationSet>
+          <AssociationSet Name="Activity_Attract_fk0" Association="Self.Activity_Attract_fk0">
+            <End Role="Activities" EntitySet="Activities" />
+            <End Role="Activity_Attract" EntitySet="Activity_Attract" />
+          </AssociationSet>
+          <AssociationSet Name="Activity_Nightlife_fk0" Association="Self.Activity_Nightlife_fk0">
+            <End Role="Activities" EntitySet="Activities" />
+            <End Role="Activity_Nightlife" EntitySet="Activity_Nightlife" />
+          </AssociationSet>
+          <AssociationSet Name="Activity_photo_fk0" Association="Self.Activity_photo_fk0">
+            <End Role="Activities" EntitySet="Activities" />
+            <End Role="Activity_photo" EntitySet="Activity_photo" />
+          </AssociationSet>
+          <AssociationSet Name="Activity_ActivityItems_fk1" Association="Self.Activity_ActivityItems_fk1">
+            <End Role="Activity_items" EntitySet="Activity_items" />
+            <End Role="Activity_ActivityItems" EntitySet="Activity_ActivityItems" />
+          </AssociationSet>
+          <AssociationSet Name="Activity_Attract_fk1" Association="Self.Activity_Attract_fk1">
+            <End Role="Attractions" EntitySet="Attractions" />
+            <End Role="Activity_Attract" EntitySet="Activity_Attract" />
+          </AssociationSet>
+          <AssociationSet Name="Activity_Nightlife_fk1" Association="Self.Activity_Nightlife_fk1">
+            <End Role="Nightlife" EntitySet="Nightlives" />
+            <End Role="Activity_Nightlife" EntitySet="Activity_Nightlife" />
+          </AssociationSet>
+          <AssociationSet Name="Rent_Ament_fk1" Association="Self.Rent_Ament_fk1">
+            <End Role="Amenties" EntitySet="Amenties" />
+            <End Role="Rent_Ament" EntitySet="Rent_Ament" />
+          </AssociationSet>
+          <AssociationSet Name="Bedrooms_fk0" Association="Self.Bedrooms_fk0">
+            <End Role="Rentals" EntitySet="Rentals" />
+            <End Role="Bedrooms" EntitySet="Bedrooms" />
+          </AssociationSet>
+          <AssociationSet Name="Cars_fk1" Association="Self.Cars_fk1">
+            <End Role="Car_pickup_Option" EntitySet="Car_pickup_Option" />
+            <End Role="Cars" EntitySet="Cars" />
+          </AssociationSet>
+          <AssociationSet Name="Cars_DefEquip_fk1" Association="Self.Cars_DefEquip_fk1">
+            <End Role="Cars" EntitySet="Cars" />
+            <End Role="Cars_DefEquip" EntitySet="Cars_DefEquip" />
+          </AssociationSet>
+          <AssociationSet Name="Cars_Equip_fk0" Association="Self.Cars_Equip_fk0">
+            <End Role="Cars" EntitySet="Cars" />
+            <End Role="Cars_Equip" EntitySet="Cars_Equip" />
+          </AssociationSet>
+          <AssociationSet Name="Cars_Feat_fk1" Association="Self.Cars_Feat_fk1">
+            <End Role="Cars" EntitySet="Cars" />
+            <End Role="Cars_Feat" EntitySet="Cars_Feat" />
+          </AssociationSet>
+          <AssociationSet Name="Cars_fk0" Association="Self.Cars_fk0">
+            <End Role="Cars_group" EntitySet="Cars_group" />
+            <End Role="Cars" EntitySet="Cars" />
+          </AssociationSet>
+          <AssociationSet Name="Cars_fk2" Association="Self.Cars_fk2">
+            <End Role="Cars_trans" EntitySet="Cars_trans" />
+            <End Role="Cars" EntitySet="Cars" />
+          </AssociationSet>
+          <AssociationSet Name="Cars_fk3" Association="Self.Cars_fk3">
+            <End Role="Engine" EntitySet="Engines" />
+            <End Role="Cars" EntitySet="Cars" />
+          </AssociationSet>
+          <AssociationSet Name="Cars_PIckupFeat_fk1" Association="Self.Cars_PIckupFeat_fk1">
+            <End Role="Cars" EntitySet="Cars" />
+            <End Role="Cars_PIckupFeat" EntitySet="Cars_PIckupFeat" />
+          </AssociationSet>
+          <AssociationSet Name="Cars_Equip_fk1" Association="Self.Cars_Equip_fk1">
+            <End Role="Equipment" EntitySet="Equipments" />
+            <End Role="Cars_Equip" EntitySet="Cars_Equip" />
+          </AssociationSet>
+          <AssociationSet Name="Cars_Feat_fk0" Association="Self.Cars_Feat_fk0">
+            <End Role="Features" EntitySet="Features" />
+            <End Role="Cars_Feat" EntitySet="Cars_Feat" />
+          </AssociationSet>
+          <AssociationSet Name="Cars_PIckupFeat_fk0" Association="Self.Cars_PIckupFeat_fk0">
+            <End Role="PickUp_Features" EntitySet="PickUp_Features" />
+            <End Role="Cars_PIckupFeat" EntitySet="Cars_PIckupFeat" />
+          </AssociationSet>
+          <AssociationSet Name="Cars_DefEquip_fk0" Association="Self.Cars_DefEquip_fk0">
+            <End Role="Default_Equipment" EntitySet="Default_Equipment" />
+            <End Role="Cars_DefEquip" EntitySet="Cars_DefEquip" />
+          </AssociationSet>
+          <AssociationSet Name="Rent_Ament_fk0" Association="Self.Rent_Ament_fk0">
+            <End Role="Rentals" EntitySet="Rentals" />
+            <End Role="Rent_Ament" EntitySet="Rent_Ament" />
+          </AssociationSet>
+          <AssociationSet Name="Rent_Suit_fk0" Association="Self.Rent_Suit_fk0">
+            <End Role="Rentals" EntitySet="Rentals" />
+            <End Role="Rent_Suit" EntitySet="Rent_Suit" />
+          </AssociationSet>
+          <AssociationSet Name="Rent_Suit_fk1" Association="Self.Rent_Suit_fk1">
+            <End Role="Suitability" EntitySet="Suitabilities" />
+            <End Role="Rent_Suit" EntitySet="Rent_Suit" />
+          </AssociationSet>
+          <AssociationSet Name="Rental_Photo_fk0" Association="Self.Rental_Photo_fk0">
+            <End Role="Rentals" EntitySet="Rentals" />
+            <End Role="Rental_Photo" EntitySet="Rental_Photo" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Trawell_dbaseModelStoreContainer" CdmEntityContainer="Trawell_DbaseEntities1">
+          <EntitySetMapping Name="Abouts">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.About">
+              <MappingFragment StoreEntitySet="About">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="jobs" ColumnName="jobs" />
+                <ScalarProperty Name="texts" ColumnName="texts" />
+                <ScalarProperty Name="photos" ColumnName="photos" />
+                <ScalarProperty Name="names" ColumnName="names" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Activities">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Activity">
+              <MappingFragment StoreEntitySet="Activities">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="activ_name" ColumnName="activ_name" />
+                <ScalarProperty Name="activ_location" ColumnName="activ_location" />
+                <ScalarProperty Name="owner_email" ColumnName="owner_email" />
+                <ScalarProperty Name="owner_number" ColumnName="owner_number" />
+                <ScalarProperty Name="owner_site" ColumnName="owner_site" />
+                <ScalarProperty Name="activ_descrption" ColumnName="activ_descrption" />
+                <ScalarProperty Name="activ_description_heading" ColumnName="activ_description_heading" />
+                <ScalarProperty Name="activ_price" ColumnName="activ_price" />
+                <ScalarProperty Name="activ_map" ColumnName="activ_map" />
+                <ScalarProperty Name="activ_rewies" ColumnName="activ_rewies" />
+                <ScalarProperty Name="activ_offers" ColumnName="activ_offers" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Activity_ActivityItems">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Activity_ActivityItems">
+              <MappingFragment StoreEntitySet="Activity_ActivityItems">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="activ_id" ColumnName="activ_id" />
+                <ScalarProperty Name="activItems_id" ColumnName="activItems_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Activity_Attract">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Activity_Attract">
+              <MappingFragment StoreEntitySet="Activity_Attract">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="activity_id" ColumnName="activity_id" />
+                <ScalarProperty Name="attract_id" ColumnName="attract_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Activity_items">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Activity_items">
+              <MappingFragment StoreEntitySet="Activity_items">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="items_name" ColumnName="items_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Activity_Nightlife">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Activity_Nightlife">
+              <MappingFragment StoreEntitySet="Activity_Nightlife">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="activ_id" ColumnName="activ_id" />
+                <ScalarProperty Name="nightlife_id" ColumnName="nightlife_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Activity_photo">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Activity_photo">
+              <MappingFragment StoreEntitySet="Activity_photo">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="photo_path" ColumnName="photo_path" />
+                <ScalarProperty Name="activ_id" ColumnName="activ_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Admin_Info">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Admin_Info">
+              <MappingFragment StoreEntitySet="Admin_Info">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="names" ColumnName="names" />
+                <ScalarProperty Name="passwords" ColumnName="passwords" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Amenties">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Amenty">
+              <MappingFragment StoreEntitySet="Amenties">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="names" ColumnName="names" />
+                <ScalarProperty Name="icon" ColumnName="icon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Attractions">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Attraction">
+              <MappingFragment StoreEntitySet="Attractions">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="attr_name" ColumnName="attr_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Bedrooms">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Bedroom">
+              <MappingFragment StoreEntitySet="Bedrooms">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="bed_num" ColumnName="bed_num" />
+                <ScalarProperty Name="rental_id" ColumnName="rental_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Car_pickup_Option">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Car_pickup_Option">
+              <MappingFragment StoreEntitySet="Car_pickup_Option">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="names" ColumnName="names" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cars">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Car">
+              <MappingFragment StoreEntitySet="Cars">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="car_Name" ColumnName="car_Name" />
+                <ScalarProperty Name="car_Price" ColumnName="car_Price" />
+                <ScalarProperty Name="car_Location" ColumnName="car_Location" />
+                <ScalarProperty Name="owner_Email" ColumnName="owner_Email" />
+                <ScalarProperty Name="owner_Number" ColumnName="owner_Number" />
+                <ScalarProperty Name="car_PickUpTime" ColumnName="car_PickUpTime" />
+                <ScalarProperty Name="car_DropOffTime" ColumnName="car_DropOffTime" />
+                <ScalarProperty Name="car_PickUpPlace" ColumnName="car_PickUpPlace" />
+                <ScalarProperty Name="car_DropOffPlace" ColumnName="car_DropOffPlace" />
+                <ScalarProperty Name="car_Description" ColumnName="car_Description" />
+                <ScalarProperty Name="car_grop_id" ColumnName="car_grop_id" />
+                <ScalarProperty Name="car_pickup_id" ColumnName="car_pickup_id" />
+                <ScalarProperty Name="car_trans_id" ColumnName="car_trans_id" />
+                <ScalarProperty Name="car_engine_id" ColumnName="car_engine_id" />
+                <ScalarProperty Name="passabgers_num" ColumnName="passabgers_num" />
+                <ScalarProperty Name="car_door_num" ColumnName="car_door_num" />
+                <ScalarProperty Name="car_baggage_quantity" ColumnName="car_baggage_quantity" />
+                <ScalarProperty Name="car_photo" ColumnName="car_photo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cars_Equip">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Cars_Equip">
+              <MappingFragment StoreEntitySet="Cars_Equip">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="cars_id" ColumnName="cars_id" />
+                <ScalarProperty Name="equipm_id" ColumnName="equipm_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cars_Feat">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Cars_Feat">
+              <MappingFragment StoreEntitySet="Cars_Feat">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="feat_id" ColumnName="feat_id" />
+                <ScalarProperty Name="cars_id" ColumnName="cars_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cars_group">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Cars_group">
+              <MappingFragment StoreEntitySet="Cars_group">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="group_name" ColumnName="group_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cars_PIckupFeat">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Cars_PIckupFeat">
+              <MappingFragment StoreEntitySet="Cars_PIckupFeat">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="pickupfeat_id" ColumnName="pickupfeat_id" />
+                <ScalarProperty Name="cars_id" ColumnName="cars_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cars_trans">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Cars_trans">
+              <MappingFragment StoreEntitySet="Cars_trans">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="trans_name" ColumnName="trans_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contacts">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Contact">
+              <MappingFragment StoreEntitySet="Contact">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="skype" ColumnName="skype" />
+                <ScalarProperty Name="number" ColumnName="number" />
+                <ScalarProperty Name="addresss" ColumnName="addresss" />
+                <ScalarProperty Name="sites" ColumnName="sites" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Default_Equipment">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Default_Equipment">
+              <MappingFragment StoreEntitySet="Default_Equipment">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="def_name" ColumnName="def_name" />
+                <ScalarProperty Name="def_icon" ColumnName="def_icon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Engines">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Engine">
+              <MappingFragment StoreEntitySet="Engine">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="engine_name" ColumnName="engine_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Equipments">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Equipment">
+              <MappingFragment StoreEntitySet="Equipment">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="equipment_Name" ColumnName="equipment_Name" />
+                <ScalarProperty Name="equpment_Price" ColumnName="equpment_Price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Features">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Feature">
+              <MappingFragment StoreEntitySet="Features">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="names" ColumnName="names" />
+                <ScalarProperty Name="feat_icon" ColumnName="feat_icon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Nightlives">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Nightlife">
+              <MappingFragment StoreEntitySet="Nightlife">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="night_name" ColumnName="night_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PickUp_Features">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.PickUp_Features">
+              <MappingFragment StoreEntitySet="PickUp_Features">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="pickup_name" ColumnName="pickup_name" />
+                <ScalarProperty Name="pickup_icon" ColumnName="pickup_icon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rent_Ament">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Rent_Ament">
+              <MappingFragment StoreEntitySet="Rent_Ament">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="rent_id" ColumnName="rent_id" />
+                <ScalarProperty Name="ament_id" ColumnName="ament_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rent_Suit">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Rent_Suit">
+              <MappingFragment StoreEntitySet="Rent_Suit">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="rent_id" ColumnName="rent_id" />
+                <ScalarProperty Name="suit_id" ColumnName="suit_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rental_Photo">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Rental_Photo">
+              <MappingFragment StoreEntitySet="Rental_Photo">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="photo_name" ColumnName="photo_name" />
+                <ScalarProperty Name="photo_path" ColumnName="photo_path" />
+                <ScalarProperty Name="rental_id" ColumnName="rental_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rentals">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Rental">
+              <MappingFragment StoreEntitySet="Rentals">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="locations" ColumnName="locations" />
+                <ScalarProperty Name="map" ColumnName="map" />
+                <ScalarProperty Name="descriptions" ColumnName="descriptions" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="owner_number" ColumnName="owner_number" />
+                <ScalarProperty Name="owner_email" ColumnName="owner_email" />
+                <ScalarProperty Name="owner_site" ColumnName="owner_site" />
+                <ScalarProperty Name="rental_male_num" ColumnName="rental_male_num" />
+                <ScalarProperty Name="rental_shower_num" ColumnName="rental_shower_num" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Site_settings">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Site_settings">
+              <MappingFragment StoreEntitySet="Site_settings">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="numbers" ColumnName="numbers" />
+                <ScalarProperty Name="loaction" ColumnName="loaction" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sliders">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Slider">
+              <MappingFragment StoreEntitySet="Sliders">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="sliderCity" ColumnName="sliderCity" />
+                <ScalarProperty Name="sliderPrice" ColumnName="sliderPrice" />
+                <ScalarProperty Name="sliderPhoto" ColumnName="sliderPhoto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Slogans">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Slogan">
+              <MappingFragment StoreEntitySet="Slogan">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="heading" ColumnName="heading" />
+                <ScalarProperty Name="descriptions" ColumnName="descriptions" />
+                <ScalarProperty Name="logo" ColumnName="logo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Subscribers">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Subscriber">
+              <MappingFragment StoreEntitySet="Subscribers">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="email" ColumnName="email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Suitabilities">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Suitability">
+              <MappingFragment StoreEntitySet="Suitability">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="names" ColumnName="names" />
+                <ScalarProperty Name="icon" ColumnName="icon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cars_DefEquip">
+            <EntityTypeMapping TypeName="Trawell_dbaseModel.Cars_DefEquip">
+              <MappingFragment StoreEntitySet="Cars_DefEquip">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="def_equip_id" ColumnName="def_equip_id" />
+                <ScalarProperty Name="cars_id" ColumnName="cars_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

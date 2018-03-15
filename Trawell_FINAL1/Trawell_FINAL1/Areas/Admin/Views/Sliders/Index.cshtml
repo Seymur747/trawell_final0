@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Trawell_FINAL1.Models.Slider>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminPageView.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.sliderCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sliderPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sliderPhoto)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.sliderCity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sliderPrice)
+        </td>
+        <td>
+            <img src="~/Areas/Admin/Uploads/@Html.DisplayFor(modelItem => item.sliderPhoto)" alt="Alternate Text" height="100" width="100"/> 
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

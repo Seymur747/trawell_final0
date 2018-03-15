@@ -1,0 +1,35 @@
+﻿@model Trawell_FINAL1.Models.Activity_photo
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/AdminPageView.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Activity_photo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.photo_path)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.photo_path)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Activity.activ_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Activity.activ_name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

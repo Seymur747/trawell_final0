@@ -1,0 +1,467 @@
+﻿@model Trawell_FINAL1.ViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/UserPage.cshtml";
+}
+
+
+
+
+
+
+<section id="Slider">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="owl-carousel ">
+
+                @foreach (var item in Model.Sliders)
+          {
+            <div style="background-image: url('/Areas/Admin/Uploads/@item.sliderPhoto')" class="d-flex align-items-center justify-content-center">
+                <div class="SLiderItems">
+                    <div class="SliderWeather">
+                        <span>+26</span>
+                        <i class="fa fa-cloud"></i>
+                    </div>
+                    <div class="SliderCity">
+                        <h1>@item.sliderCity</h1>
+                    </div>
+                    <div class="SliderPrice">
+                        <h6>from</h6>
+                        <h3>@item.sliderPrice</h3>
+                        <a href="#" class="btn btn-white btn-ghost"><i class="fa fa-chevron-right"></i> Explore</a>
+                    </div>
+                </div>
+                <div class="Layout"></div>
+            </div>
+        }
+
+        
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="tabs">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#flights" role="tab" data-toggle="tab"><i class="fa fa-plane"></i><span>Flights</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#rentals" role="tab" data-toggle="tab"><i class="fa fa-home"></i><span>Rentals</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cars" role="tab" data-toggle="tab"><i class="fa fa-car"></i><span>Cars</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#activities" role="tab" data-toggle="tab"><i class="fa fa-bolt"></i><span>Activities</span></a>
+                    </li>
+                </ul>
+                <!-- id="datepicker" -->
+                <!-- Tab panes -->
+                <div class="tab-content p-0">
+                    <div role="tabpanel" class="tab-pane fade in active show" id="flights">
+                        <h5>Find Your Perfect Home</h5>
+                        <div class="row">
+                            <div class="Search col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                <div class="SearchInto">
+
+                                    <form style="width:100%;">
+                                        <div class="row">
+                                            <div class="Location col-sm-12 col-md-12 col-lg-3 col-xl-3">
+                                                <div class="form-group">
+                                                    <label for="Where">From</label>
+                                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                                        <div class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                                                        <input id="CarResultPickUp" type="text" class="form-control autocomplete" id="Where" value="USA, New York">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="Location col-sm-12 col-md-12 col-lg-3 col-xl-3">
+                                                <div class="form-group">
+                                                    <label for="Where">To</label>
+                                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                                        <div class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                                                        <input id="CarsResultDropOff" name="CarsResultDropOff" type="text" class="form-control autocomplete" id="Where" value="USA, New York">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="CheckIn col-sm-12 col-md-12 col-lg-2 col-xl-2">
+                                                <div class="form-group">
+                                                    <label for="CheckIn">Departing</label>
+                                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                                        <div class="input-group-addon">
+                                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                        </div>
+                                                        <input type="text" class="datepicker CheckIn form-control" id="CheckIn" value="">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="CheckOut col-sm-12 col-md-12 col-lg-2 col-xl-2">
+                                                <div class="form-group">
+                                                    <label for="CheckOut">Returning</label>
+                                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                                        <div class="input-group-addon">
+                                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                        </div>
+                                                        <input type="text" class="datepicker CheckOut form-control" id="CheckOut" value="">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class=" col-sm-12 col-md-12 col-lg-2 col-xl-2 Guests">
+                                                <div class="form-group form-group- form-group-select-plus">
+                                                    <label>Passengers</label>
+                                                    <div class="btn-group btn-group-select-num GuestsBtnGroup" data-toggle="buttons">
+                                                        <label class="btn btn-primary  active">
+                                                            <input type="radio" name="options" />1
+                                                        </label>
+                                                        <label class="btn btn-primary">
+                                                            <input type="radio" name="options" />2
+                                                        </label>
+                                                        <label class="btn btn-primary">
+                                                            <input type="radio" name="options" />3
+                                                        </label>
+                                                        <label class="btn btn-primary">
+                                                            <input type="radio" name="options" />4
+                                                        </label>
+                                                        <label class="btn btn-primary">
+                                                            <input type="radio" name="options" />5
+                                                        </label>
+                                                        <label class="btn btn-primary Guests5" ">
+                                                            5+
+                                                        </label>
+                                                    </div>
+                                                    <select class="form-control GuestsSectionGroup hidden-sm-up hidden-sm-down">
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
+                                                        <option selected="selected">6</option>
+                                                        <option>7</option>
+                                                        <option>8</option>
+                                                        <option>9</option>
+                                                        <option>10</option>
+                                                        <option>11</option>
+                                                        <option>12</option>
+                                                        <option>13</option>
+                                                        <option>14</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <input class="btn color-second" type="submit" name="" value="Search for Flights">
+
+                                        </div>
+                                    </form>
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="rentals">
+                        <h5>Find Your Perfect Home</h5>
+                        <div class="row">
+                            <div class="Search col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                <div class="SearchInto">
+
+                                    <form style="width:100%;">
+                                        <div class="row">
+                                            <div class="Location col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                                                <div class="form-group">
+                                                    <label for="Where">Where</label>
+                                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                                        <div class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                                                        <input type="text" class="form-control autocomplete" id="RentalResult" value="USA, New York">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-8">
+                                                <div class="row">
+                                                    <div class="CheckIn col-sm-12 col-md-12 col-lg-3 col-xl-3">
+                                                        <div class="form-group">
+                                                            <label for="CheckIn">Check In</label>
+                                                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                                                <div class="input-group-addon">
+                                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                                </div>
+                                                                <input type="text" class="datepicker CheckIn form-control" id="CheckIn" value="">
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="CheckOut col-sm-12 col-md-12 col-lg-3 col-xl-3">
+                                                        <div class="form-group">
+                                                            <label for="CheckOut">Check Out</label>
+                                                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                                                <div class="input-group-addon">
+                                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                                </div>
+                                                                <input type="text" class="datepicker CheckOut form-control" id="CheckOut" value="">
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class=" col-sm-12 col-md-12 col-lg-3 col-xl-3 Guests">
+                                                        <div class="form-group form-group- form-group-select-plus">
+                                                            <label>Guests</label>
+                                                            <div class="btn-group btn-group-select-num GuestsBtnGroup" data-toggle="buttons">
+                                                                <label class="btn btn-primary  active">
+                                                                    <input type="radio" name="options" />1
+                                                                </label>
+                                                                <label class="btn btn-primary">
+                                                                    <input type="radio" name="options" />2
+                                                                </label>
+                                                                <label class="btn btn-primary">
+                                                                    <input type="radio" name="options" />3
+                                                                </label>
+                                                                <label class="btn btn-primary">
+                                                                    <input type="radio" name="options" />4
+                                                                </label>
+                                                                <label class="btn btn-primary Guests5" ">
+                                                                    4+
+                                                                </label>
+                                                            </div>
+                                                            <select class="form-control GuestsSectionGroup hidden-sm-up hidden-sm-down">
+                                                                <option>1</option>
+                                                                <option>2</option>
+                                                                <option>3</option>
+                                                                <option>4</option>
+                                                                <option selected="selected">5</option>
+                                                                <option>6</option>
+                                                                <option>7</option>
+                                                                <option>8</option>
+                                                                <option>9</option>
+                                                                <option>10</option>
+                                                                <option>11</option>
+                                                                <option>12</option>
+                                                                <option>13</option>
+                                                                <option>14</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 Rooms">
+                                                        <div class="form-group form-group- form-group-select-plus">
+                                                            <label>Rooms</label>
+                                                            <div class="btn-group btn-group-select-num RoomsBtnGroup" data-toggle="buttons">
+                                                                <label class="btn btn-primary active">
+                                                                    <input type="radio" name="options" />1
+                                                                </label>
+                                                                <label class="btn btn-primary ">
+                                                                    <input type="radio" name="options" />2
+                                                                </label>
+                                                                <label class="btn btn-primary">
+                                                                    <input type="radio" name="options" />3
+                                                                </label>
+                                                                <label class="btn btn-primary">
+                                                                    <input type="radio" name="options" />4
+                                                                </label>
+                                                                <label class="btn btn-primary Rooms5">
+                                                                    4+
+                                                                </label>
+                                                            </div>
+                                                            <select class="form-control hidden-sm-up hidden-sm-down RoomsSectionGroup">
+                                                                <option>1</option>
+                                                                <option>2</option>
+                                                                <option>3</option>
+                                                                <option>4</option>
+                                                                <option selected="selected">5</option>
+                                                                <option>6</option>
+                                                                <option>7</option>
+                                                                <option>8</option>
+                                                                <option>9</option>
+                                                                <option>10</option>
+                                                                <option>11</option>
+                                                                <option>12</option>
+                                                                <option>13</option>
+                                                                <option>14</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <input class="btn color-second" type="submit" name="" value="Search for Vacation Rentals">
+
+                                        </div>
+                                    </form>
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="cars">
+                        <h5>Search for Cheap Rental Cars</h5>
+                        <div class="row">
+                            <div class="Search col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                <div class="SearchInto">
+
+                                    <form style="width:100%;">
+                                        <div class="row">
+                                            <div class="Location col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                                                <div class="form-group">
+                                                    <label for="Where">Pick Up Location</label>
+                                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                                        <div class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                                                        <input id="CarResultPickUp" type="text" class="form-control autocomplete" id="Where" value="USA, New York">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="Location col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                                                <div class="form-group">
+                                                    <label for="Where">Drop Off Location</label>
+                                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                                        <div class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                                                        <input id="CarsResultDropOff" name="CarsResultDropOff" type="text" class="form-control autocomplete" id="Where" value="USA, New York">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="CheckIn col-sm-12 col-md-12 col-lg-2 col-xl-2">
+                                                <div class="form-group">
+                                                    <label for="CheckIn">Check In</label>
+                                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0 WithOutIcon">
+
+                                                        <input type="text" class="datepicker CheckIn form-control" id="CheckIn" value="">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="CheckOut col-sm-12 col-md-12 col-lg-2 col-xl-2">
+                                                <div class="form-group">
+                                                    <label for="CheckOut">Check Out</label>
+                                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0 WithOutIcon">
+
+                                                        <input type="text" class="datepicker CheckOut form-control" id="CheckOut" value="">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+                                            <input class="btn color-second" type="submit" name="" value="Search for Rental Cars">
+
+                                        </div>
+                                    </form>
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="activities">
+                        <h5>Search for Activities</h5>
+                        <div class="row">
+                            <div class="Search col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                <div class="SearchInto">
+
+                                    <form style="width:100%;">
+                                        <div class="row">
+                                            <div class="Location col-lg-6 col-xl-6">
+                                                <div class="form-group">
+                                                    <label for="Where">Where</label>
+                                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                                        <div class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                                                        <input type="text" class="form-control autocomplete" id="ActiveResult" value="USA, New York">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="CheckIn col-lg-3 col-xl-3">
+                                                <div class="form-group">
+                                                    <label for="CheckIn">Check In</label>
+                                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                                        <div class="input-group-addon">
+                                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                        </div>
+                                                        <input type="text" class="datepicker CheckIn form-control" id="CheckIn" value="">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="CheckOut col-lg-3 col-xl-3">
+                                                <div class="form-group">
+                                                    <label for="CheckOut">Check Out</label>
+                                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                                        <div class="input-group-addon">
+                                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                        </div>
+                                                        <input type="text" class="datepicker CheckOut form-control" id="CheckOut" value="">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <input class="btn color-second" type="submit" name="" value="Search for Activity">
+                                        </div>
+                                    </form>
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<section id="Paralax">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="ParalaxItem align-items-center d-flex justify-content-center">
+                    <div class="tac">
+                        <h2>LAST MINUTE DEAL</h2>
+                        <h1>The Peninsula - New York</h1>
+                        <span>Fri 14 Mar - Sun 16 Mar</span>
+                        <small>$120 / person</small>
+                        <a href="#" class="btn btn-lg btn-white btn-ghost">Book Now <i class="fa fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="Compliments">
+    <div class="container-fluid">
+        <div class="row">
+            @foreach (var item in Model.Slogans)
+    {
+
+        <div class="col-md-12 col-lg-3 ">
+            <div class="box align-items-center">
+                <div class="iconContainer"><i class="@item.logo "></i></div>
+                <span>@item.heading</span>
+                <small>@item.descriptions</small>
+
+            </div>
+        </div>
+
+}
+
+
+
+        </div>
+    </div>
+</section>

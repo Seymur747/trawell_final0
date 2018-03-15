@@ -1,0 +1,840 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>SB Admin - Start Bootstrap Template</title>
+    <!-- Bootstrap core CSS-->
+    <link href="~/Areas/Admin_Front/admin/startbootstrap-sb-admin-gh-pages/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href="~/Areas/Admin_Front/admin/startbootstrap-sb-admin-gh-pages/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Page level plugin CSS-->
+    <link href="~/Areas/Admin_Front/admin/startbootstrap-sb-admin-gh-pages/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+    <!-- Custom styles for this template-->
+    <link href="~/Areas/Admin_Front/admin/startbootstrap-sb-admin-gh-pages/css/sb-admin.css" rel="stylesheet">
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                    <a class="nav-link" href="index.html">
+                        <i class="fa fa-fw fa-dashboard"></i>
+                        <span class="nav-link-text">Dashboard</span>
+                    </a>
+                </li>
+              
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                    <a class="nav-link" href="tables.html">
+                       
+                        <i class="fa fa-fw fa-table"></i>
+                        <span class="nav-link-text">Tables</span>
+                    </a>
+                </li>
+               
+   
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
+                        <i class="fa fa-fw fa-sitemap"></i>
+                        <span class="nav-link-text">About Settings</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="collapseMulti">
+                        <li>
+                            @Html.ActionLink("About View","Index","Abouts")
+                            
+                        </li>
+                        <li>
+                            @Html.ActionLink("About create", "Create", "Abouts")
+                        </li>
+                        
+                    </ul>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti1" data-parent="#exampleAccordion">
+                        <i class="fa fa-fw fa-sitemap"></i>
+                        <span class="nav-link-text">Activities</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="collapseMulti1">
+                        <li>
+                            @Html.ActionLink("Activities View", "Index", "Activities")
+
+                        </li>
+                        <li>
+                            @Html.ActionLink("About create", "Create", "Activities")
+                        </li>
+
+                        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti2" data-parent="#exampleAccordion">
+                                <i class="fa fa-fw fa-sitemap"></i>
+                                <span class="nav-link-text">Activity Activity Items</span>
+                            </a>
+                            <ul class="sidenav-second-level collapse" id="collapseMulti2">
+                                <li>
+                                    @Html.ActionLink("Items View", "Index", "Activity_ActivityItems")
+
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Items create", "Create", "Activity_ActivityItems")
+                                </li>
+
+                            </ul>
+                        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti3" data-parent="#exampleAccordion">
+                                <i class="fa fa-fw fa-sitemap"></i>
+                                <span class="nav-link-text">Activity Atraction</span>
+                            </a>
+                            <ul class="sidenav-second-level collapse" id="collapseMulti3">
+                                <li>
+                                    @Html.ActionLink("Attract View", "Index", "Activity_Attract")
+
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Attract create", "Create", "Activity_Attract")
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti10" data-parent="#exampleAccordion">
+                                <i class="fa fa-fw fa-sitemap"></i>
+                                <span class="nav-link-text">Attractions</span>
+                            </a>
+                            <ul class="sidenav-second-level collapse" id="collapseMulti10">
+                                <li>
+                                    @Html.ActionLink("Attractions View", "Index", "Attractions")
+
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Attractions Add", "Create", "Attractions")
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti4" data-parent="#exampleAccordion">
+                                <i class="fa fa-fw fa-sitemap"></i>
+                                <span class="nav-link-text">Activity items</span>
+                            </a>
+                            <ul class="sidenav-second-level collapse" id="collapseMulti4">
+                                <li>
+                                    @Html.ActionLink("Items View", "Index", "Activity_items")
+
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Items create", "Create", "Activity_items")
+                                </li>
+
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti5" data-parent="#exampleAccordion">
+                                <i class="fa fa-fw fa-sitemap"></i>
+                                <span class="nav-link-text">Activity nightlife</span>
+                            </a>
+                            <ul class="sidenav-second-level collapse" id="collapseMulti5">
+                                <li>
+                                    @Html.ActionLink("Night View", "Index", "Activity_Nightlife")
+
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Night create", "Create", "Activity_Nightlife")
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti6" data-parent="#exampleAccordion">
+                                <i class="fa fa-fw fa-sitemap"></i>
+                                <span class="nav-link-text">Activity photos</span>
+                            </a>
+                            <ul class="sidenav-second-level collapse" id="collapseMulti6">
+                                <li>
+                                    @Html.ActionLink("photos View", "Index", "Activity_photo")
+
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Photo Add", "Create", "Activity_photo")
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti22" data-parent="#exampleAccordion">
+                                <i class="fa fa-fw fa-sitemap"></i>
+                                <span class="nav-link-text">NightLives</span>
+                            </a>
+                            <ul class="sidenav-second-level collapse" id="collapseMulti22">
+                                <li>
+                                    @Html.ActionLink("NightLives View", "Index", "NightLives")
+
+                                </li>
+                                <li>
+                                    @Html.ActionLink("NightLives Add", "Create", "NightLives")
+                                </li>
+
+                            </ul>
+                        </li>
+                        </li>
+                    </ul>
+                </li>
+            
+             
+
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti8" data-parent="#exampleAccordion">
+                        <i class="fa fa-fw fa-sitemap"></i>
+                        <span class="nav-link-text">Admin info</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="collapseMulti8">
+                        <li>
+                            @Html.ActionLink("Admin View", "Index", "Admin_Info")
+
+                        </li>
+                        <li>
+                            @Html.ActionLink("Admin Add", "Create", "Admin_Info")
+                        </li>
+
+                    </ul>
+                </li>
+         
+
+
+            
+
+
+          
+
+
+  
+
+           
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti17" data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-sitemap"></i>
+                    <span class="nav-link-text">Cars</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseMulti17">
+                    <li>
+                        @Html.ActionLink("Car    View", "Index", "Cars")
+
+                    </li>
+                    <li>
+                        @Html.ActionLink("Car    Add", "Create", "Cars")
+                    </li>
+
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti14" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-sitemap"></i>
+                            <span class="nav-link-text">Car  Equipment</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="collapseMulti14">
+                            <li>
+                                @Html.ActionLink("Cars_Equip View", "Index", "Cars_Equip")
+
+                            </li>
+                            <li>
+                                @Html.ActionLink("Cars_Equip Add", "Create", "Cars_Equip")
+                            </li>
+
+                            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti12" data-parent="#exampleAccordion">
+                                    <i class="fa fa-fw fa-sitemap"></i>
+                                    <span class="nav-link-text">Car Pickup Opiton</span>
+                                </a>
+                                <ul class="sidenav-second-level collapse" id="collapseMulti12">
+                                    <li>
+                                        @Html.ActionLink("Pickup Opiton View", "Index", "Car_pickup_Option")
+
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Pickup Opiton Add", "Create", "Car_pickup_Option")
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti21" data-parent="#exampleAccordion">
+                                    <i class="fa fa-fw fa-sitemap"></i>
+                                    <span class="nav-link-text">Equipments</span>
+                                </a>
+                                <ul class="sidenav-second-level collapse" id="collapseMulti21">
+                                    <li>
+                                        @Html.ActionLink("Equipments View", "Index", "Equipments")
+
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Equipments Add", "Create", "Equipments")
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti0" data-parent="#exampleAccordion">
+                                    <i class="fa fa-fw fa-sitemap"></i>
+                                    <span class="nav-link-text">Features</span>
+                                </a>
+                                <ul class="sidenav-second-level collapse" id="collapseMulti0">
+                                    <li>
+                                        @Html.ActionLink("Features View", "Index", "Features")
+
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Features Add", "Create", "Features")
+                                    </li>
+
+                                </ul>
+                            </li>
+
+
+
+
+                            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti96" data-parent="#exampleAccordion">
+                                    <i class="fa fa-fw fa-sitemap"></i>
+                                    <span class="nav-link-text">PickUp_Features</span>
+                                </a>
+                                <ul class="sidenav-second-level collapse" id="collapseMulti96">
+                                    <li>
+                                        @Html.ActionLink("PickUp_Features View", "Index", "PickUp_Features")
+
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("PickUp_Features Add", "Create", "PickUp_Features")
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti13" data-parent="#exampleAccordion">
+                                    <i class="fa fa-fw fa-sitemap"></i>
+                                    <span class="nav-link-text">Car Default Equipment</span>
+                                </a>
+                                <ul class="sidenav-second-level collapse" id="collapseMulti13">
+                                    <li>
+                                        @Html.ActionLink("Cars_DefEquip View", "Index", "Cars_DefEquip")
+
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Cars_DefEquip Add", "Create", "Cars_DefEquip")
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti15" data-parent="#exampleAccordion">
+                                    <i class="fa fa-fw fa-sitemap"></i>
+                                    <span class="nav-link-text">Car  Features</span>
+                                </a>
+                                <ul class="sidenav-second-level collapse" id="collapseMulti15">
+                                    <li>
+                                        @Html.ActionLink("Cars Features View", "Index", "Cars_Feat")
+
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Cars Features  Add", "Create", "Cars_Feat")
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti19" data-parent="#exampleAccordion">
+                                    <i class="fa fa-fw fa-sitemap"></i>
+                                    <span class="nav-link-text">Defaul Equipment</span>
+                                </a>
+                                <ul class="sidenav-second-level collapse" id="collapseMulti19">
+                                    <li>
+                                        @Html.ActionLink("Default_Equipment View", "Index", "Default_Equipment")
+
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Default_Equipment Add", "Create", "Defaul_Equipment")
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti31" data-parent="#exampleAccordion">
+                                    <i class="fa fa-fw fa-sitemap"></i>
+                                    <span class="nav-link-text">Car  Groups</span>
+                                </a>
+                                <ul class="sidenav-second-level collapse" id="collapseMulti31">
+                                    <li>
+                                        @Html.ActionLink("Cars Group View", "Index", "Cars_group")
+
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Cars Group  Add", "Create", "Cars_group")
+                                    </li>
+
+                                </ul>
+                            </li>
+
+
+                            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti16" data-parent="#exampleAccordion">
+                                    <i class="fa fa-fw fa-sitemap"></i>
+                                    <span class="nav-link-text">Car  Pickup  Features</span>
+                                </a>
+                                <ul class="sidenav-second-level collapse" id="collapseMulti16">
+                                    <li>
+                                        @Html.ActionLink("Pickup  Features View", "Index", "Cars_PIckupFeat")
+
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Pickup  Features  Add", "Create", "Cars_PIckupFeat")
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti90" data-parent="#exampleAccordion">
+                                    <i class="fa fa-fw fa-sitemap"></i>
+                                    <span class="nav-link-text">Car trans</span>
+                                </a>
+                                <ul class="sidenav-second-level collapse" id="collapseMulti90">
+                                    <li>
+                                        @Html.ActionLink("Car trans   View", "Index", "Cars_trans")
+
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Car trans   Add", "Create", "Cars_trans")
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti20" data-parent="#exampleAccordion">
+                                    <i class="fa fa-fw fa-sitemap"></i>
+                                    <span class="nav-link-text">Engines</span>
+                                </a>
+                                <ul class="sidenav-second-level collapse" id="collapseMulti20">
+                                    <li>
+                                        @Html.ActionLink("Engines View", "Index", "Engines")
+
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Engines Add", "Create", "Engines")
+                                    </li>
+
+                                </ul>
+                            </li>
+
+
+                        </ul>
+
+                    </li>
+
+
+
+
+
+                </ul>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti18" data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-sitemap"></i>
+                    <span class="nav-link-text">Contacts</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseMulti18">
+                    <li>
+                        @Html.ActionLink("Contacts View", "Index", "Contacts")
+
+                    </li>
+                    <li>
+                        @Html.ActionLink("Contacts Add", "Create", "Contacts")
+                    </li>
+
+                </ul>
+            </li>
+           
+            
+
+
+           
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti37" data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-sitemap"></i>
+                    <span class="nav-link-text">Rentals</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseMulti37">
+                    <li>
+                        @Html.ActionLink("Rentals View", "Index", "Rentals")
+
+                    </li>
+                    <li>
+                        @Html.ActionLink("Rentals Add", "Create", "Rentals")
+                    </li>
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti23" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-sitemap"></i>
+                            <span class="nav-link-text">Rent_Ament</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="collapseMulti23">
+                            <li>
+                                @Html.ActionLink("Rent_Ament View", "Index", "Rent_Ament")
+
+                            </li>
+                            <li>
+                                @Html.ActionLink("Rent_Ament Add", "Create", "Rent_Ament")
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti9" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-sitemap"></i>
+                            <span class="nav-link-text">Amenties</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="collapseMulti9">
+                            <li>
+                                @Html.ActionLink("Amenties View", "Index", "Amenties")
+
+                            </li>
+                            <li>
+                                @Html.ActionLink("Amenties Add", "Create", "Amenties")
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti11" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-sitemap"></i>
+                            <span class="nav-link-text">Bedrooms</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="collapseMulti11">
+                            <li>
+                                @Html.ActionLink("Bedrooms View", "Index", "Bedrooms")
+
+                            </li>
+                            <li>
+                                @Html.ActionLink("Bedrooms Add", "Create", "Bedrooms")
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti24" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-sitemap"></i>
+                            <span class="nav-link-text">Rent_Suit</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="collapseMulti24">
+                            <li>
+                                @Html.ActionLink("Rent_Suit View", "Index", "Rent_Suit")
+
+                            </li>
+                            <li>
+                                @Html.ActionLink("Rent_Suit Add", "Create", "Rent_Suit")
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti25" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-sitemap"></i>
+                            <span class="nav-link-text">Rental_Photo</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="collapseMulti25">
+                            <li>
+                                @Html.ActionLink("Rental_Photo View", "Index", "Rental_Photo")
+
+                            </li>
+                            <li>
+                                @Html.ActionLink("Rental_Photo Add", "Create", "Rental_Photo")
+                            </li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+            </li>
+
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti26" data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-sitemap"></i>
+                    <span class="nav-link-text">Site_settings</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseMulti26">
+                    <li>
+                        @Html.ActionLink("Site_settings View", "Index", "Site_settings")
+
+                    </li>
+                    <li>
+                        @Html.ActionLink("Site_settings Add", "Create", "Site_settings")
+                    </li>
+
+
+                </ul>
+            </li>
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti27" data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-sitemap"></i>
+                    <span class="nav-link-text">Sliders</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseMulti27">
+                    <li>
+                        @Html.ActionLink("Sliders View", "Index", "Sliders")
+
+                    </li>
+                    <li>
+                        @Html.ActionLink("Sliders Add", "Create", "Sliders")
+                    </li>
+
+                </ul>
+            </li>
+
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti28" data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-sitemap"></i>
+                    <span class="nav-link-text">Slogans</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseMulti28">
+                    <li>
+                        @Html.ActionLink("Slogans View", "Index", "Slogans")
+
+                    </li>
+                    <li>
+                        @Html.ActionLink("Slogans Add", "Create", "Slogans")
+                    </li>
+
+                </ul>
+            </li>
+
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti29" data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-sitemap"></i>
+                    <span class="nav-link-text">Subscribers</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseMulti29">
+                    <li>
+                        @Html.ActionLink("Subscribers View", "Index", "Subscribers")
+
+                    </li>
+                    <li>
+                        @Html.ActionLink("Subscribers Add", "Create", "Subscribers")
+                    </li>
+
+                </ul>
+            </li>
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti30" data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-sitemap"></i>
+                    <span class="nav-link-text">Suitabilities</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseMulti30">
+                    <li>
+                        @Html.ActionLink("Suitabilities View", "Index", "Suitabilities")
+
+                    </li>
+                    <li>
+                        @Html.ActionLink("Suitabilities Add", "Create", "Suitabilities")
+                    </li>
+
+                </ul>
+            </li>
+
+            </li>
+
+
+            </ul>
+            <ul class="navbar-nav sidenav-toggler">
+                <li class="nav-item">
+                    <a class="nav-link text-center" id="sidenavToggler">
+                        <i class="fa fa-fw fa-angle-left"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-fw fa-envelope"></i>
+                        <span class="d-lg-none">
+                            Messages
+                            <span class="badge badge-pill badge-primary">12 New</span>
+                        </span>
+                        <span class="indicator text-primary d-none d-lg-block">
+                            <i class="fa fa-fw fa-circle"></i>
+                        </span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="messagesDropdown">
+                        <h6 class="dropdown-header">New Messages:</h6>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">
+                            <strong>David Miller</strong>
+                            <span class="small float-right text-muted">11:21 AM</span>
+                            <div class="dropdown-message small">Hey there! This new version of SB Admin is pretty awesome! These messages clip off when they reach the end of the box so they don't overflow over to the sides!</div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">
+                            <strong>Jane Smith</strong>
+                            <span class="small float-right text-muted">11:21 AM</span>
+                            <div class="dropdown-message small">I was wondering if you could meet for an appointment at 3:00 instead of 4:00. Thanks!</div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">
+                            <strong>John Doe</strong>
+                            <span class="small float-right text-muted">11:21 AM</span>
+                            <div class="dropdown-message small">I've sent the final files over to you for review. When you're able to sign off of them let me know and we can discuss distribution.</div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item small" href="#">View all messages</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-fw fa-bell"></i>
+                        <span class="d-lg-none">
+                            Alerts
+                            <span class="badge badge-pill badge-warning">6 New</span>
+                        </span>
+                        <span class="indicator text-warning d-none d-lg-block">
+                            <i class="fa fa-fw fa-circle"></i>
+                        </span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="alertsDropdown">
+                        <h6 class="dropdown-header">New Alerts:</h6>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">
+                            <span class="text-success">
+                                <strong>
+                                    <i class="fa fa-long-arrow-up fa-fw"></i>Status Update
+                                </strong>
+                            </span>
+                            <span class="small float-right text-muted">11:21 AM</span>
+                            <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">
+                            <span class="text-danger">
+                                <strong>
+                                    <i class="fa fa-long-arrow-down fa-fw"></i>Status Update
+                                </strong>
+                            </span>
+                            <span class="small float-right text-muted">11:21 AM</span>
+                            <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">
+                            <span class="text-success">
+                                <strong>
+                                    <i class="fa fa-long-arrow-up fa-fw"></i>Status Update
+                                </strong>
+                            </span>
+                            <span class="small float-right text-muted">11:21 AM</span>
+                            <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item small" href="#">View all alerts</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <form class="form-inline my-2 my-lg-0 mr-lg-2">
+                        <div class="input-group">
+                            <input class="form-control" type="text" placeholder="Search for...">
+                            <span class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </form>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                        <i class="fa fa-fw fa-sign-out"></i>Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="content-wrapper">
+        <div class="container-fluid">
+
+
+            <!-- Breadcrumbs-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="#">Dashboard</a>
+                </li>
+                <li class="breadcrumb-item active">My Dashboard</li>
+            </ol>
+            @RenderBody();'
+           
+        </div>
+        <!-- /.container-fluid-->
+        <!-- /.content-wrapper-->
+        <footer class="sticky-footer">
+            <div class="container">
+                <div class="text-center">
+                    <small>Copyright © Your Website 2018</small>
+                </div>
+            </div>
+        </footer>
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+        <!-- Logout Modal-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <a class="btn btn-primary" href="login.html">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JavaScript-->
+        <script src="~/Areas/Admin_Front/admin/startbootstrap-sb-admin-gh-pages/vendor/jquery/jquery.min.js"></script>
+    
+        <script src="~/Areas/Admin_Front/admin/startbootstrap-sb-admin-gh-pages/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Core plugin JavaScript-->
+        <script src="~/Areas/Admin_Front/admin/startbootstrap-sb-admin-gh-pages/vendor/jquery-easing/jquery.easing.min.js"></script>
+        <!-- Page level plugin JavaScript-->
+        <script src="~/Areas/Admin_Front/admin/startbootstrap-sb-admin-gh-pages/vendor/chart.js/Chart.min.js"></script>
+        <script src="~/Areas/Admin_Front/admin/startbootstrap-sb-admin-gh-pages/vendor/datatables/jquery.dataTables.js"></script>
+        <script src="~/Areas/Admin_Front/admin/startbootstrap-sb-admin-gh-pages/vendor/datatables/dataTables.bootstrap4.js"></script>
+        <!-- Custom scripts for all pages-->
+        <script src="~/Areas/Admin_Front/admin/startbootstrap-sb-admin-gh-pages/js/sb-admin.min.js"></script>
+        <!-- Custom scripts for this page-->
+        <script src="~/Areas/Admin_Front/admin/startbootstrap-sb-admin-gh-pages/js/sb-admin-datatables.min.js"></script>
+        <script src="~/Areas/Admin_Front/admin/startbootstrap-sb-admin-gh-pages/js/sb-admin-charts.min.js"></script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+﻿@model Trawell_FINAL1.Models.About
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/AdminPageView.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>About</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.jobs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.jobs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.texts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.texts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.photos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.photos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.names)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.names)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

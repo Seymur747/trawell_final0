@@ -1,0 +1,51 @@
+﻿@model Trawell_FINAL1.Models.About
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/AdminPageView.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>About</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.jobs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.jobs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.texts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.texts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.photos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.photos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.names)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.names)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,45 @@
+#Compliments{
+	padding: 50px 60px;
+	.box{ color: #808080;
+		position: relative;
+		span{
+			display: block;
+
+		}
+		
+	}
+	.iconContainer{
+			right: 20px;
+			position: absolute;
+			background: #808080;
+			height: 40px;
+			width: 40px;
+			text-align: center;
+			border-radius: 100%;
+			i{
+				margin-top: 12px;
+				color: white;
+			}
+	}
+}
+
+
+
+	@media (min-width: 360px) {
+	#Compliments{
+
+		.iconContainer{
+
+			right: 35px !important;
+			}
+			}
+			.box{
+				small{
+					font-size: 72%;
+				}
+			}
+		}
+		
+
+
+

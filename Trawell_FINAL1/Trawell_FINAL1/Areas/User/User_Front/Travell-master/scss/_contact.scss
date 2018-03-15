@@ -1,0 +1,382 @@
+#map{
+
+	.contactHeading{
+		
+		padding: 50px;
+		h1{
+			 font-family: 'Open Sans', sans-serif;
+			 font-size: 5em;
+			color: #565656;
+			font-weight: 350;
+		}
+	}
+
+	.maps{
+
+
+		height: 400px;
+
+	
+	}
+
+	.col-md-12:nth-child(2){
+		padding: 0px ;
+	}
+}
+
+#infoUs{
+padding-top: 60px;
+color: #565656;
+margin-bottom: 50px;
+	.leftSide{
+
+	color: #A07373;
+
+		
+		
+
+		p{
+
+			font-size: 14px;
+		}
+		
+		.forms{
+
+
+			label{
+
+					line-height: 20px;
+				display: block;
+			}
+			.color-second{
+				
+				margin-top: 10px;
+			}
+		}
+
+	}
+	.rightSide{
+		border-left: 1px solid  #D4D4D4;;
+		padding-left: 30px;
+		color: #565656;
+
+		label{
+		
+			display: block;
+			line-height: 20px;
+		}
+		 
+		 a{
+		 	text-decoration:none;
+		 	
+		 	line-height: 30px;
+		 }
+	}
+}
+#footer{	
+	background: #262626;
+
+	padding-top: 60px;
+	// padding-bottom: 20px;
+		color: white;
+
+	a{
+				text-decoration: none;
+				color:white;
+				display: block;
+				line-height: 22px;
+	}
+	.borderC:hover{
+
+		border-radius: 15px;
+	}
+	.footerA
+	{
+
+		font-size: 25px;
+
+		a{
+			color: #1AAEF2;
+			 margin-bottom: 10px;
+
+			font-size: 25px;
+			font-weight: 300;
+		}
+		small{
+			font-size: .45em;
+		}
+	}
+
+	.logos{
+		height: auto;
+		width: 150px;
+		margin-bottom: 30px;
+
+		img{
+			height: 100%;
+			width: 100%;
+		}
+	}
+	.linkss{
+		// padding: 0px 30px 30px 0px;
+		ul{padding-left: 0px;
+
+			li{
+
+				list-style: none;
+				a{
+
+				
+				font-size: .7em;
+		
+				}
+			}
+		}
+	}
+	small{
+		font-size: .73em;
+	}
+	.logolarXirdaYumru{
+	
+		padding: 19px;
+		padding-left: 0px;
+		ul{
+		
+		padding: 0px;
+			li{
+					display: inline-block;
+					&:hover a{
+						animation :pulse_animation .5s;
+					}
+					
+				list-style-type: none;
+				margin-right: 10px;
+				a{
+					height: 30px;
+					width: 30px;
+					background: #0ebcf2;
+					text-align: center;
+					line-height: 30px;
+					border-radius: 100%;
+					text-decoration: none;
+					color: white;
+					
+				}
+			}
+
+		}
+	}
+	h4{
+
+		font-size: 23px;
+		font-weight: 300;
+		padding-bottom: 5px;
+	}
+	.NewsletterInput{
+
+
+		background: black;
+		margin-bottom: 10px;
+		display: block;
+	}
+	.color-second{
+
+		margin-top: 10px;
+	}
+h3{
+	font-weight: 300;
+	color: #1AAEF2;
+}
+
+}
+
+
+
+
+
+
+#map{
+	.contactHeading{
+		h1{
+	@media (min-width: 360px) and (max-width: 411px){
+
+		font-size: 2.6em;
+			}
+			@media (min-width: 412px) and (max-width: 576px){
+
+		font-size: 3em;
+			}
+			@media (min-width: 576px) and (max-width: 768px){
+
+		font-size: 4em;
+			}
+
+	@media (min-width: 992px) and (max-width: 1350px){
+
+		font-size: 6em;
+			}
+
+
+
+		}
+		
+	}
+}
+
+
+
+
+    	@media    (min-width: 360px) and (max-width: 576px){
+    	
+
+			
+			#footer{
+					
+
+				.f1{
+
+					font-size: .66em;
+
+
+
+				}
+
+
+				.linkss{
+
+					margin-top: 20px;
+				}
+				
+
+				.footerA{
+				
+					h3,a{
+
+						font-size: 22px;
+					}
+					
+
+				}
+
+				.small2{
+
+					font-size: .4em;
+				}
+				.logolarXirdaYumru{
+
+
+					ul{
+
+						li{
+
+
+							width: 26px;
+						}
+					}
+				}
+			}
+    	}								    		
+		//Small devices (landscape phones , 576px and up)
+    	@media (min-width: 576px)  and (max-width: 768px){
+    		
+			
+		
+			#footer{
+
+					.footerA{
+				
+					h3,a{
+						text-decoration:none;
+						
+
+						font-size: 15px;
+					}
+					
+					.small2{
+
+						font-size: .36em;
+					}
+				}
+
+				.logolarXirdaYumru{
+
+
+
+					ul{
+
+							li{
+
+										margin-right: 5px;
+								width: 15px;
+								a{
+
+									width: 20px;
+									font-size: 13px;
+								}
+							}
+						
+					}
+				}
+			}
+
+
+
+    	}
+    	//Medimum (tablets  , 768px and up)
+    	@media (min-width: 768px)  and (max-width: 992px){
+			
+			#footer{
+						.footerA{
+				
+					h3,a{
+
+						font-size: 15px;
+					}
+					
+					.small2{
+
+						font-size: .5em;
+					}
+				}
+			}
+
+			.logolarXirdaYumru{
+
+				ul{
+					li{
+						margin-right: 1px !important;
+					}
+				}
+			}
+    	}
+    	//Large devices (desktops  , 992px and up)
+    	@media (min-width: 992px)  and (max-width: 1200px){
+			#footer{
+
+
+			.logolarXirdaYumru{
+
+				ul{
+					li{
+						margin-right: 2px !important;
+					}
+				}
+			}
+    	
+			
+						.footerA{
+				
+					h3,a{
+
+						font-size: 20px;
+					}
+					
+					.small2{
+
+						font-size: .5em;
+					}
+				}
+			
+    	}}
+    	//Extra Large devices (large desktops , 1200px and up)
+  

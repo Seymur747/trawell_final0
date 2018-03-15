@@ -1,0 +1,113 @@
+﻿@model Trawell_FINAL1.Models.Activity
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/AdminPageView.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Activity</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.activ_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.activ_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.activ_location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.activ_location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.owner_email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.owner_email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.owner_number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.owner_number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.owner_site)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.owner_site)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.activ_descrption)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.activ_descrption)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.activ_description_heading)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.activ_description_heading)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.activ_price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.activ_price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.activ_map)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.activ_map)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.activ_rewies)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.activ_rewies)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.activ_offers)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.activ_offers)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

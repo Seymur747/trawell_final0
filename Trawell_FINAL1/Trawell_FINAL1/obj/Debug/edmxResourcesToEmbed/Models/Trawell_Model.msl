@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Trawell_dbaseModelStoreContainer" CdmEntityContainer="Trawell_DbaseEntities1">
+    <EntitySetMapping Name="Abouts">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.About">
+        <MappingFragment StoreEntitySet="About">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="jobs" ColumnName="jobs" />
+          <ScalarProperty Name="texts" ColumnName="texts" />
+          <ScalarProperty Name="photos" ColumnName="photos" />
+          <ScalarProperty Name="names" ColumnName="names" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Activities">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Activity">
+        <MappingFragment StoreEntitySet="Activities">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="activ_name" ColumnName="activ_name" />
+          <ScalarProperty Name="activ_location" ColumnName="activ_location" />
+          <ScalarProperty Name="owner_email" ColumnName="owner_email" />
+          <ScalarProperty Name="owner_number" ColumnName="owner_number" />
+          <ScalarProperty Name="owner_site" ColumnName="owner_site" />
+          <ScalarProperty Name="activ_descrption" ColumnName="activ_descrption" />
+          <ScalarProperty Name="activ_description_heading" ColumnName="activ_description_heading" />
+          <ScalarProperty Name="activ_price" ColumnName="activ_price" />
+          <ScalarProperty Name="activ_map" ColumnName="activ_map" />
+          <ScalarProperty Name="activ_rewies" ColumnName="activ_rewies" />
+          <ScalarProperty Name="activ_offers" ColumnName="activ_offers" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Activity_ActivityItems">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Activity_ActivityItems">
+        <MappingFragment StoreEntitySet="Activity_ActivityItems">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="activ_id" ColumnName="activ_id" />
+          <ScalarProperty Name="activItems_id" ColumnName="activItems_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Activity_Attract">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Activity_Attract">
+        <MappingFragment StoreEntitySet="Activity_Attract">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="activity_id" ColumnName="activity_id" />
+          <ScalarProperty Name="attract_id" ColumnName="attract_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Activity_items">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Activity_items">
+        <MappingFragment StoreEntitySet="Activity_items">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="items_name" ColumnName="items_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Activity_Nightlife">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Activity_Nightlife">
+        <MappingFragment StoreEntitySet="Activity_Nightlife">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="activ_id" ColumnName="activ_id" />
+          <ScalarProperty Name="nightlife_id" ColumnName="nightlife_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Activity_photo">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Activity_photo">
+        <MappingFragment StoreEntitySet="Activity_photo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="photo_path" ColumnName="photo_path" />
+          <ScalarProperty Name="activ_id" ColumnName="activ_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Admin_Info">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Admin_Info">
+        <MappingFragment StoreEntitySet="Admin_Info">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="names" ColumnName="names" />
+          <ScalarProperty Name="passwords" ColumnName="passwords" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Amenties">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Amenty">
+        <MappingFragment StoreEntitySet="Amenties">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="names" ColumnName="names" />
+          <ScalarProperty Name="icon" ColumnName="icon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Attractions">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Attraction">
+        <MappingFragment StoreEntitySet="Attractions">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="attr_name" ColumnName="attr_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bedrooms">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Bedroom">
+        <MappingFragment StoreEntitySet="Bedrooms">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="bed_num" ColumnName="bed_num" />
+          <ScalarProperty Name="rental_id" ColumnName="rental_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Car_pickup_Option">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Car_pickup_Option">
+        <MappingFragment StoreEntitySet="Car_pickup_Option">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="names" ColumnName="names" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cars">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Car">
+        <MappingFragment StoreEntitySet="Cars">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="car_Name" ColumnName="car_Name" />
+          <ScalarProperty Name="car_Price" ColumnName="car_Price" />
+          <ScalarProperty Name="car_Location" ColumnName="car_Location" />
+          <ScalarProperty Name="owner_Email" ColumnName="owner_Email" />
+          <ScalarProperty Name="owner_Number" ColumnName="owner_Number" />
+          <ScalarProperty Name="car_PickUpTime" ColumnName="car_PickUpTime" />
+          <ScalarProperty Name="car_DropOffTime" ColumnName="car_DropOffTime" />
+          <ScalarProperty Name="car_PickUpPlace" ColumnName="car_PickUpPlace" />
+          <ScalarProperty Name="car_DropOffPlace" ColumnName="car_DropOffPlace" />
+          <ScalarProperty Name="car_Description" ColumnName="car_Description" />
+          <ScalarProperty Name="car_grop_id" ColumnName="car_grop_id" />
+          <ScalarProperty Name="car_pickup_id" ColumnName="car_pickup_id" />
+          <ScalarProperty Name="car_trans_id" ColumnName="car_trans_id" />
+          <ScalarProperty Name="car_engine_id" ColumnName="car_engine_id" />
+          <ScalarProperty Name="passabgers_num" ColumnName="passabgers_num" />
+          <ScalarProperty Name="car_door_num" ColumnName="car_door_num" />
+          <ScalarProperty Name="car_baggage_quantity" ColumnName="car_baggage_quantity" />
+          <ScalarProperty Name="car_photo" ColumnName="car_photo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cars_Equip">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Cars_Equip">
+        <MappingFragment StoreEntitySet="Cars_Equip">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="cars_id" ColumnName="cars_id" />
+          <ScalarProperty Name="equipm_id" ColumnName="equipm_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cars_Feat">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Cars_Feat">
+        <MappingFragment StoreEntitySet="Cars_Feat">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="feat_id" ColumnName="feat_id" />
+          <ScalarProperty Name="cars_id" ColumnName="cars_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cars_group">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Cars_group">
+        <MappingFragment StoreEntitySet="Cars_group">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="group_name" ColumnName="group_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cars_PIckupFeat">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Cars_PIckupFeat">
+        <MappingFragment StoreEntitySet="Cars_PIckupFeat">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="pickupfeat_id" ColumnName="pickupfeat_id" />
+          <ScalarProperty Name="cars_id" ColumnName="cars_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cars_trans">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Cars_trans">
+        <MappingFragment StoreEntitySet="Cars_trans">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="trans_name" ColumnName="trans_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contacts">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Contact">
+        <MappingFragment StoreEntitySet="Contact">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="skype" ColumnName="skype" />
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="addresss" ColumnName="addresss" />
+          <ScalarProperty Name="sites" ColumnName="sites" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Default_Equipment">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Default_Equipment">
+        <MappingFragment StoreEntitySet="Default_Equipment">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="def_name" ColumnName="def_name" />
+          <ScalarProperty Name="def_icon" ColumnName="def_icon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Engines">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Engine">
+        <MappingFragment StoreEntitySet="Engine">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="engine_name" ColumnName="engine_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Equipments">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Equipment">
+        <MappingFragment StoreEntitySet="Equipment">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="equipment_Name" ColumnName="equipment_Name" />
+          <ScalarProperty Name="equpment_Price" ColumnName="equpment_Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Features">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Feature">
+        <MappingFragment StoreEntitySet="Features">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="names" ColumnName="names" />
+          <ScalarProperty Name="feat_icon" ColumnName="feat_icon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nightlives">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Nightlife">
+        <MappingFragment StoreEntitySet="Nightlife">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="night_name" ColumnName="night_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PickUp_Features">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.PickUp_Features">
+        <MappingFragment StoreEntitySet="PickUp_Features">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="pickup_name" ColumnName="pickup_name" />
+          <ScalarProperty Name="pickup_icon" ColumnName="pickup_icon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rent_Ament">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Rent_Ament">
+        <MappingFragment StoreEntitySet="Rent_Ament">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="rent_id" ColumnName="rent_id" />
+          <ScalarProperty Name="ament_id" ColumnName="ament_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rent_Suit">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Rent_Suit">
+        <MappingFragment StoreEntitySet="Rent_Suit">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="rent_id" ColumnName="rent_id" />
+          <ScalarProperty Name="suit_id" ColumnName="suit_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rental_Photo">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Rental_Photo">
+        <MappingFragment StoreEntitySet="Rental_Photo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="photo_name" ColumnName="photo_name" />
+          <ScalarProperty Name="photo_path" ColumnName="photo_path" />
+          <ScalarProperty Name="rental_id" ColumnName="rental_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rentals">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Rental">
+        <MappingFragment StoreEntitySet="Rentals">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="locations" ColumnName="locations" />
+          <ScalarProperty Name="map" ColumnName="map" />
+          <ScalarProperty Name="descriptions" ColumnName="descriptions" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="owner_number" ColumnName="owner_number" />
+          <ScalarProperty Name="owner_email" ColumnName="owner_email" />
+          <ScalarProperty Name="owner_site" ColumnName="owner_site" />
+          <ScalarProperty Name="rental_male_num" ColumnName="rental_male_num" />
+          <ScalarProperty Name="rental_shower_num" ColumnName="rental_shower_num" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Site_settings">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Site_settings">
+        <MappingFragment StoreEntitySet="Site_settings">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="numbers" ColumnName="numbers" />
+          <ScalarProperty Name="loaction" ColumnName="loaction" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sliders">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Slider">
+        <MappingFragment StoreEntitySet="Sliders">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="sliderCity" ColumnName="sliderCity" />
+          <ScalarProperty Name="sliderPrice" ColumnName="sliderPrice" />
+          <ScalarProperty Name="sliderPhoto" ColumnName="sliderPhoto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Slogans">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Slogan">
+        <MappingFragment StoreEntitySet="Slogan">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="heading" ColumnName="heading" />
+          <ScalarProperty Name="descriptions" ColumnName="descriptions" />
+          <ScalarProperty Name="logo" ColumnName="logo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subscribers">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Subscriber">
+        <MappingFragment StoreEntitySet="Subscribers">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="email" ColumnName="email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suitabilities">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Suitability">
+        <MappingFragment StoreEntitySet="Suitability">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="names" ColumnName="names" />
+          <ScalarProperty Name="icon" ColumnName="icon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cars_DefEquip">
+      <EntityTypeMapping TypeName="Trawell_dbaseModel.Cars_DefEquip">
+        <MappingFragment StoreEntitySet="Cars_DefEquip">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="def_equip_id" ColumnName="def_equip_id" />
+          <ScalarProperty Name="cars_id" ColumnName="cars_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

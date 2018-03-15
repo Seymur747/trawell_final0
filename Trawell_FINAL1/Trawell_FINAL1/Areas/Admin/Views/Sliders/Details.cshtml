@@ -1,0 +1,43 @@
+﻿@model Trawell_FINAL1.Models.Slider
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/AdminPageView.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Slider</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.sliderCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sliderCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sliderPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sliderPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sliderPhoto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sliderPhoto)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

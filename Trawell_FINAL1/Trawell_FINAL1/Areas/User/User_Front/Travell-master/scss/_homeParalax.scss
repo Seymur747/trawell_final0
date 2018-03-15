@@ -1,0 +1,98 @@
+#Paralax{
+	background-image: url("../img/Netherlands_Houses_491444.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	color: #fff;
+	padding: 60px;
+	background-attachment: fixed;
+	.ParalaxItem{
+		.tac{
+			text-align: center;
+		}
+		h2{
+			font-size: 40px;
+			font-weight: 400;
+			text-align: center;
+		}
+
+		h1{
+			font-size: 50px;
+			margin-top: 25px;
+			font-weight: 400;
+		}
+		span{
+			display:block;
+			text-align: center;
+			font-size: 16px;
+			font-style: italic;
+		}
+		small{
+			display: block;
+			text-align: center;
+			font-size: 13px;
+			margin-top: 15px;
+		}
+		a{
+			text-decoration: none;
+			color: white;
+			margin-top: 20px;
+			border: 2px solid white;
+			transition :all .5s ease;
+			&:hover{
+				background: white;
+				color: gray;
+				border-radius: 15px;
+				transition :all .4s ease;
+			}
+			i{
+				font-size: 14px;
+			}
+		}
+	}
+}
+	  	@media (min-width: 360px){
+			
+	#Paralax{
+		.tac{
+			h2{
+				font-size: 33px;
+			}
+			h1{
+				font-size: 33px;
+			}
+		}
+	}
+}
+
+	  	@media (min-width: 412px){
+			
+	#Paralax{
+		.tac{
+			h2{
+				font-size: 29px;
+			}
+			h1{
+				font-size: 38px;
+			}
+		}
+	}
+}
+
+	  	@media (min-width: 375px){
+			
+	#Paralax{
+		.tac{
+			h2{
+				font-size: 35px;
+			}
+			h1{
+				font-size: 33px;
+			}
+		}
+	}
+}
+
+
+
+

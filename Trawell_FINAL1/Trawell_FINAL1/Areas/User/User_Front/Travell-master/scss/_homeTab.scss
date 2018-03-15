@@ -1,0 +1,291 @@
+#tabs .container .row .col-lg-12 .nav-tabs {
+  border-bottom: 0px;
+}
+#tabs .container .row .col-lg-12 .nav-tabs .nav-item .nav-link {
+  background: rgba(0, 0, 0, 0.4);
+  border: none !important;
+  color: #fff;
+  margin: 0px 5px;
+}
+#tabs .container .row .col-lg-12 .nav-tabs .nav-item .nav-link i {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 2px;
+  background: rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 5px;
+  transition: all .4s ease;
+}
+#tabs .container .row .col-lg-12 .nav-tabs .nav-item .nav-link i:hover {
+  background: #0ebcf2;
+  color: #fff;
+}
+#tabs .container .row .col-lg-12 .nav-tabs .nav-item .nav-link span {
+  color: #fff;
+}
+#tabs .container .row .col-lg-12 .nav-tabs .nav-item .nav-link.active {
+  background: #0ebcf2;
+}
+#tabs .container .row .col-lg-12 .nav-tabs .nav-item .nav-link.active i {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 2px;
+  background: rgba(0, 0, 0, 0.3);
+  margin-right: 5px;
+  border-radius: 50%;
+  text-align: center;
+}
+#tabs .container .row .col-lg-12 .nav-tabs .nav-item .nav-link.active span {
+  color: #fff;
+}
+
+#tabs{
+	position: relative;
+	bottom: 44px;
+	z-index: 6;
+	.tabsHeading{
+		h1{
+			 font-weight: 300;
+		    color: #565656;
+		    font-size: 36px;
+		    padding: 20px 0px;
+		}
+	}
+}
+
+
+
+.toggleDivs{
+	
+	a{
+		display: inline-block;
+		height: 32px;
+		width: 86px;
+		text-decoration: none;
+		color: white;
+		background: #0ebcf2;
+		font-size: 13px;
+		text-align: center;
+		padding-top: 5px;
+
+	}
+}
+
+
+
+
+	#tabs{
+	form {
+	label{
+		color: gray;
+		margin-top: 20px;
+	}
+	input{
+		border-radius: 0px;
+	}
+}
+
+		
+		ul{
+			li{
+				a{
+		
+				span{
+					display: inline-block;
+
+					}
+				}
+
+			}
+		}
+	}
+		  	@media  (max-width: 360px){
+			
+	#tabs{
+		
+		
+		ul{
+			li{
+				
+		
+				span{
+					    display: none !important;
+				}
+			}
+		}
+	}
+}
+
+
+	  	@media (min-width: 360px) and (max-width: 768px){
+			
+	#tabs{
+bottom: 46px;
+		
+		
+		ul{
+			li{
+				
+		
+				span{
+					    display: none !important;
+				}
+			}
+		}
+	}
+}
+
+
+	  	@media (min-width: 992px) and (max-width: 1024px){
+			
+	#tabs{
+	bottom: 46px;
+		
+		
+	}
+}
+#tabs{
+	.tab-content{
+		h5{
+				    font-family: 'Roboto', arial, helvetica, sans-serif;
+				    margin-top: 50px;
+				    font-weight: 300;
+				    color: #565656;
+				    line-height: 1.3em;
+				    font-size: 40px;
+
+			}
+		.row{
+					.Search{
+						margin-bottom: 30px;
+						.SearchInto{
+							    padding: 15px 0px;
+							form{
+								.row{
+									.Location,.CheckIn,.CheckOut,.CheckInTime {
+										.form-group{
+											position: relative;
+											.input-group.WithOutIcon{
+												
+												
+												.form-control{
+														
+															border-radius:0px;
+															border-left:1px solid #eee !important;
+															
+															padding: 8px 12px;
+															width: 100%;
+
+															&:focus{
+															
+																border-color: rgba(0,0,0,.15);
+																border-left:1px solid #0ebcf2;
+															}
+														
+													}
+
+
+											}
+											.input-group{
+												width: 100%;
+												
+												.input-group-addon{
+														border-radius:0px;
+														background: transparent;
+														border-right: 1px solid transparent !important;
+													
+												}
+												.form-control{
+														
+															border-radius:0px;
+															border-left:1px solid transparent !important;
+															padding: 8px 12px;
+															padding-left: 0px;
+															width: 100%;
+
+															&:focus{
+															
+																border-color: rgba(0,0,0,.15);
+																border-left:1px solid #0ebcf2;
+															}
+														
+													}
+
+
+											}
+											
+
+										}
+									}
+									.Guests,.Rooms{
+										.form-group{
+											label{
+												display:block;
+
+											}
+											.btn-group{
+												.btn.active{
+													    background: #0ebcf2;
+													    border-color: #0ebcf2;
+													    box-shadow: none;
+													    color: #fff;
+													     &:hover{
+													    	   background: #0ebcf2;
+													 		   border-color: #0ebcf2;
+													 		   box-shadow: none;
+													 		   color: #fff;
+													    }
+												}
+												.btn{
+														margin-top: 0px;
+													    border-radius: 50% !important;
+													    height: 28px;
+													    line-height: 26px;
+													    width: 28px;
+													    padding: 0;
+													    background: none;
+													    color: #737373;
+													    border: 1px solid transparent;
+													    cursor:pointer;
+													    &:hover{
+													    	color: #737373;
+														    border-color: #737373;
+														    background: none;
+													    }
+													input{
+
+													}
+												}
+
+											}
+										}
+									}
+									
+									input.color-second{
+										margin-left: 15px;
+										display:inline-block;
+										cursor:pointer;
+										border-radius:5px;
+										&:hover{
+											border-radius:10px;
+											background: darken(#0ebcf2,10%);
+										}	
+									}
+								}
+							}
+						}
+					}
+				}
+	
+			
+		
+	}
+}
+
+

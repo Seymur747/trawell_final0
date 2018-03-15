@@ -1,0 +1,97 @@
+#Loading{
+	width:100%;
+		min-height:100vh;
+		background-image: url("../img/upper_lake_in_new_york_central_park_1024x487.jpg");
+		background-size: cover;
+		position: relative;
+		.container-fluid{
+			padding: 30px;
+			.row{
+					.logo{
+						width: 150px;
+						position: relative;
+						z-index: 1;
+						opacity:.8;
+						transition:opacity .4s ease;
+
+						&:hover{
+							opacity:1;
+						}
+						
+					}
+				.col-md-12{
+					height:100vh;
+					background: rgba(3,3,3,.5);
+					position: absolute;
+					top:0px;
+					left:0px;
+				
+					.content{
+						position: relative;
+						z-index: 5;
+						color:#fff;
+						.clock{
+							height: 150px;
+							width: 150px;
+							border-radius:50%;
+							border:4px solid #fff;
+							position: relative;
+							margin:0 auto;
+							margin-bottom:20px;
+							.Dott{
+							    width: 12px;
+							    height: 12px;
+							   
+							    background: #fff;
+							    border-radius: 50%;
+							    z-index: 1;
+							}
+							.Hour{
+								height: 40px;
+								width: 4px;
+								background: #fff;
+								position: absolute;
+								top:30px;
+								left:50%;
+								transform-origin: center bottom;
+								animation: clock 6s infinite linear;
+								border-radius: 0 0 3px 3px;
+							}
+							.Minute{
+								height: 56px;
+								width: 4px;
+								opacity:0.8;
+								background: #fff;
+								position: absolute;
+								top:16px;
+								left:49%;
+								transform-origin: center bottom;
+								animation: clock 1s infinite linear;
+								border-radius: 0 0 3px 3px;
+
+							}
+
+						}
+						h2{
+							font-size: 40px;
+							margin-bottom:5px;
+
+						}
+						p{
+
+						}
+						
+						
+						
+
+
+					}
+
+
+
+				}
+				
+			
+			}
+		}
+}

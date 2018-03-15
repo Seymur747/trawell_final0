@@ -1,0 +1,94 @@
+﻿@model IEnumerable<Trawell_FINAL1.Models.Activity>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminPageView.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.activ_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.activ_location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.owner_email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.owner_number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.owner_site)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.activ_descrption)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.activ_description_heading)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.activ_price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.activ_map)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.activ_rewies)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.activ_offers)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.activ_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.activ_location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.owner_email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.owner_number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.owner_site)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.activ_descrption)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.activ_description_heading)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.activ_price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.activ_map)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.activ_rewies)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.activ_offers)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

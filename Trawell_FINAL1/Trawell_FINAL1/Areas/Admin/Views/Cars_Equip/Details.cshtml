@@ -1,0 +1,35 @@
+﻿@model Trawell_FINAL1.Models.Cars_Equip
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/AdminPageView.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Cars_Equip</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Car.car_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Car.car_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Equipment.equipment_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Equipment.equipment_Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

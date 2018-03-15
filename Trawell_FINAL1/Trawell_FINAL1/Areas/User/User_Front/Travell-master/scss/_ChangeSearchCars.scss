@@ -1,0 +1,158 @@
+#ChangeSearchCars{
+width: 100%;
+	height: 100vh;
+	position: fixed;
+	background: rgba(11, 11, 11,.8);
+	z-index: 12;
+	top:0px;
+	left:0px;
+	display:none;
+	.container{
+		height: 100%;
+		.row{
+			width: 100%;
+			.col-xl-10{
+					 
+			    .ChangeSearchInto{
+			    	   background: #fff;
+			    	   padding: 25px;
+			    	   position: relative;
+			    	   .CloseClick{
+							position: absolute;
+							top:10px;
+							right:10px;
+							    width: 44px;
+							    height: 44px;
+							    line-height: 44px;
+							    text-decoration: none;
+							    text-align: center;
+							    padding: 0 0 18px 10px;
+							    font-style: normal;
+							    font-size: 28px;
+							    cursor:pointer;
+							    transition:color .3s ease;
+							    &:hover{
+							    	color:#0ebcf2;
+							    }
+			    	   }
+			    	h3{
+					font-size: 30.758000000000003px;
+					margin-top: 0;
+				    font-weight: 300;
+				    color: #565656;
+				    line-height: 1.3em;
+				    padding-left: 15px;
+			
+
+					}
+					form{
+						.row{
+							.Location,.CheckIn,.CheckOut,.CheckInTime {
+								.form-group{
+											position: relative;
+											.input-group.WithOutIcon{
+												
+												
+												.form-control{
+														
+															border-radius:0px;
+															border-left:1px solid #eee !important;
+															
+															padding: 8px 12px;
+															width: 100%;
+
+															&:focus{
+															
+																border-color: rgba(0,0,0,.15);
+																border-left:1px solid #0ebcf2;
+															}
+														
+													}
+
+
+											}
+											.input-group{
+												width: 100%;
+												
+												.input-group-addon{
+														border-radius:0px;
+														background: transparent;
+														border-right: 1px solid transparent !important;
+													
+												}
+												.form-control{
+														
+															border-radius:0px;
+															border-left:1px solid transparent !important;
+															padding-left: 0px;
+															width: 100%;
+
+															&:focus{
+															
+																border-color: rgba(0,0,0,.15);
+																border-left:1px solid #0ebcf2;
+															}
+														
+													}
+
+
+											}
+											.InTime{
+													box-shadow: 0 2px 1px rgba(0,0,0,0.2);
+													position: absolute;
+													z-index: 5;
+													background: #fff;
+													border:1px solid #eee;
+													width: 190px;
+													padding: 0px 15px;
+													display: none;
+													.row{
+														i{
+															display: inline-block;
+														    margin: 0;
+														    outline: 0;
+														    color: #333;
+														    width: 35px;
+														    height: 35px;
+														    margin-bottom: 5px;
+														    margin-top: 5px;
+														    line-height: 35px;
+														    text-align: center;
+														    font-size: 20px;
+														    cursor:pointer;
+														    transition:background .3s ease;
+														    &:hover{
+														    	background: #eee;
+														    }
+														}
+														p{
+															    width: 35px;
+															    height: 35px;
+															    line-height: 35px;
+															    margin: 0;
+															    text-align: center;
+															    color: #000;
+															    border:1px solid #333;
+														}
+														
+													}
+												}
+
+										}
+							}
+							input.color-second{
+										margin-left: 15px;
+										display:inline-block;
+										cursor:pointer;
+										&:hover{
+											border-radius:10px;
+											background: darken(#0ebcf2,10%);
+										}	
+									}
+						}
+					}
+				}
+			}
+		}
+	}
+}

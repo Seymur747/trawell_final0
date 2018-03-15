@@ -1,0 +1,136 @@
+﻿@model IEnumerable<Trawell_FINAL1.Models.Car>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminPageView.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.car_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.car_Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.car_Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.owner_Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.owner_Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.car_PickUpTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.car_DropOffTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.car_PickUpPlace)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.car_DropOffPlace)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.car_Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.passabgers_num)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.car_door_num)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.car_baggage_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.car_photo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Car_pickup_Option.names)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cars_group.group_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cars_trans.trans_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Engine.engine_name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.car_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.car_Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.car_Location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.owner_Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.owner_Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.car_PickUpTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.car_DropOffTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.car_PickUpPlace)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.car_DropOffPlace)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.car_Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.passabgers_num)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.car_door_num)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.car_baggage_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.car_photo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Car_pickup_Option.names)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cars_group.group_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cars_trans.trans_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Engine.engine_name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

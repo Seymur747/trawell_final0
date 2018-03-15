@@ -1,0 +1,51 @@
+﻿@model Trawell_FINAL1.Models.Contact
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/AdminPageView.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Contact</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.skype)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.skype)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.addresss)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.addresss)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sites)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sites)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

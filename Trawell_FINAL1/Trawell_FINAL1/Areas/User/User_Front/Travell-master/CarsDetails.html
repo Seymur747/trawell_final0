@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CarDetail</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Roboto:100,300,400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="plugin/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="plugin/css/owl.theme.default.min.css">
+    <link rel="stylesheet" type="text/css" href="plugin/style.css">
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/ion.rangeSlider.css" />
+    <link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="plugin/picker/css/pikaday.css">
+    <link rel="stylesheet" href="plugin/picker/css/theme.css">
+    <link rel="stylesheet" href="plugin/picker/css/triangle.css">
+<!--     <link rel="stylesheet" href="plugin/picker/css/site.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+   
+  </head>
+<body>
+
+
+	<!-- Header --> 
+ <header id="header" class="">
+    <div class = "headerTop">
+      <div class = "container">
+        <div class = "row">
+          <div class="logo col-md-2">
+            <img class="img-fluid" src="img/TrawelLogo.png" alt="">
+          </div>
+          <div class="search col-md-5 offset-md-5">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col col-md-8 col-sm-12 col-lg-8 col-xl-9">
+                  <div class="input-group">
+                     <span class="input-group-addon fa fa-search" aria-hidden="true" id="basic-addon1"></span>
+                      <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1">
+                  </div>
+                </div>
+                <div class="col col-md-4 col-sm-12 col-lg-4 col-xl-3">
+                  <div class = "FlagDrop">
+                    
+                    <div class="flaglink">
+                      <a href="#">
+                      <img src="img/uk.png" alt="">
+                      ENG
+                      <i class="fa fa-angle-down d-inline"></i>
+                      
+                    </a>
+                    </div>
+                    <div class = "Triangle">
+                      
+                    </div>
+                    <div class = "flags">
+                      <ul class="clearfix pl-0 mb-0">
+                        <li><a href="#"><img src="img/de.png" alt="">GER</a></li>
+                        <li><a href="#"><img src="img/jp.png" alt="">JAP</a></li>
+                        <li><a href="#"><img src="img/it.png" alt="">ITA</a></li>
+                        <li><a href="#"><img src="img/fr.png" alt="">FRE</a></li>
+                        <li><a href="#"><img src="img/ru.png" alt="">RUS</a></li>
+                        <li><a href="#"><img src="img/kr.png" alt="">KOR</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+       <div class = "NavBar">
+      <div class = "container">
+        <div class = "row">
+          <div class="col-md-12 col-lg-12 col-xl-12">
+              <nav class="navbar  navbar-toggleable-md navbar-light p-0 ">
+               <div class="Burger">
+                <span class="BurgerMenu col-lg-hide hidden-lg-up">Menu</span>
+                 <button class="navbar-toggler navbar-toggler-right border-0 " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="fa fa-bars fa-lg text-white"></span>
+                 </button>
+               </div>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item ">
+                      <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Flights</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link " href="rentalsSearch.html">Rentals</a>
+                    </li>
+                    <li class="nav-item active color-second">
+                      <a class="nav-link " href="carsSearch.html">Cars</a>
+                    </li>
+                     <li class="nav-item">
+                      <a class="nav-link " href="activitiesSearch.html">Activities</a>
+                    </li>
+                     <li class="nav-item">
+                      <a class="nav-link " href="About.html">About</a>
+                    
+                    </li>
+                     <li class="nav-item">
+                      <a class="nav-link " href="contact.html">Contanct</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+	<!-- /header END -->
+  <section id = "CarsDetailContent">
+    <div class="container">
+      <div class="row">
+         <div class="Path col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <ul class="clearfix pl-0">
+                  <li><a href="#" class="color-second-cl">Home<i>></i></a></li>
+                  <li><a href="#" class="color-second-cl">United States<i>></i></a></li>
+                  <li><a href="#" class="color-second-cl">New York (NY)<i>></i></a></li>
+                  <li><a href="#" class="color-second-cl">New York City<i>></i></a></li>
+                  <li><a href="#" class="color-second-cl">New York City Rental Cars  <i>></i></a></li>
+                  <li><a href="#" class="LastLi">Maserati GranTurismo <i>></i></a>
+                    </li>
+              </ul>
+           </div>
+            <div class="ShortInfo col-md-9 col-lg-9 col-xl-9">
+                <h2>Maserati GranTurismo</h2>
+                
+                <ul class="clearfix pl-0">
+                  <li><a class="color-second-cl" href="#"><span class="fa fa-envelope"></span>Owner E-mail</a></li>
+                  
+                  <li><a class="LastLi" href="#"><span class="fa fa-phone"></span>+1 (442) 933-2159</a></li>
+                </ul>
+              </div>
+              <div class="Price col-md-3 col-lg-3 col-xl-3">
+                <p><sub>price</sub><span>$70</span><small>/day</small></p>  
+             </div>
+             <div class=" CarDetailLeft col-sm-12 col-md-12 col-lg-9 col-xl-9">
+               <div class="row">
+                 <div class="col-lg-5 col-xl-5">
+                   <img class="img-fluid" src="img/Maserati-GranTurismo-Sport-facelift.png" alt="">
+                 </div>
+                 <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
+                   <ul class="clearfix pl-0">
+                     <li class="CheckBox">
+                        <label class="i-checker" for="Seat">
+                          <input class="" type="checkbox" name="" id="Seat">
+                          <i class="fa fa-check fa-2" aria-hidden="true"></i>
+                          <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0; z-index: 2"></ins>
+                        </label>
+                            Child Toddler Seat<span>35$</span></li>
+                     <li class="CheckBox">
+                        <label class="i-checker" for="Rack">
+                          <input class="" type="checkbox" name="" id="Rack">
+                          <i class="fa fa-check fa-2" aria-hidden="true"></i>
+                          <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0; z-index: 2"></ins>
+                        </label>
+                            Ski Rack<span>40$</span></li>
+                     <li class="CheckBox">
+                        <label class="i-checker" for="Child">
+                          <input class="" type="checkbox" name="" id="Child">
+                           <i class="fa fa-check fa-2" aria-hidden="true"></i>
+                           <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0; z-index: 2"></ins>
+                        </label>
+                            Infant Child Seat<span>35$</span></li>
+                     <li class="CheckBox">
+                        <label class="i-checker" for="Satellite">
+                           <input class="" type="checkbox" name="" id="Satellite">
+                            <i class="fa fa-check fa-2" aria-hidden="true"></i>
+                            <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0; z-index: 2"></ins>
+                        </label>
+                            GPS Satellite<span>100$</span></li>
+                     <li class="CheckBox">
+                        <label class="i-checker" for="Chains">
+                           <input class="" type="checkbox" name="" id="Chains">
+                           <i class="fa fa-check fa-2" aria-hidden="true"></i>
+                           <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0; z-index: 2"></ins>
+                        </label>
+                            Show Chains<span>120$</span></li>
+                   </ul>
+                 </div>
+                 <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                   <ul class="clearfix">
+                     <li class="Total">Price Per Day<span>$70</span></li>
+                     <li class="Total">Rental Price<span>$490</span><p>7 days (april 13 - april 20)</p></li>
+                     <li class="Total">Equipment<span>$0</span></li>
+                     <li class="Total">Rental Tolal<strong>$490</strong></li>
+                   </ul>
+                   <a href="#" class="btn color-second">Checkout</a>
+                 </div>
+                 <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                   <p>Arrive at your destination in style with this air-conditioned automatic. With room for 4 passengers and 2 pieces of luggage, it's ideal for small groups looking to get from A to B in comfort. Price can change at any moment so book now to avoid disappointment!</p>
+                 </div>
+                 <hr>
+                 <div class="CarProperties col-lg-12 col-xl-12">
+                   <div class="row">
+                     <div class="col-xl-4 col-xl-4">
+                       <h5>Car Features</h5>
+                        <ul class="clearfix pl-0">
+                          <li><span><i class="fa fa-wifi" aria-hidden="true"></i></span>Up to 4 Passengers</li>
+                          <li><span><i class="fa fa-car" aria-hidden="true"></i></span>3 Doors</li>
+                          <li><span><i class="fa fa-modx" aria-hidden="true"></i></span>2 Pieces of Laggage</li>
+                          <li><span><i class="fa fa-cutlery" aria-hidden="true"></i></span>Automatic Transmission</li>
+                          <li><span><i class="fa fa-ship" aria-hidden="true"></i></span>Gas Vehicle</li>
+                        </ul>
+                     </div>
+                     <div class="col-xl-4 col-xl-4">
+                         <h5>Default Equipment</h5>
+                            <ul class="clearfix pl-0">
+                              <li><span><i class="fa fa-wheelchair" aria-hidden="true"></i></span>Climate Control</li>
+                              <li><span><i class="fa fa-smile-o" aria-hidden="true"></i></span>Stereo CD/MP3</li>
+                              <li><span><i class="fa fa-child" aria-hidden="true"></i></span>Power Windows</li>
+                              <li><span><i class="fa fa-male" aria-hidden="true"></i></span>FM Radio</li>
+                              <li><span><i class="fa fa-paw" aria-hidden="true"></i></span>Power Door Locks</li>
+                            </ul>
+                     </div>
+                     <div class="col-xl-4 col-xl-4">
+                       <h5>Pickup Features</h5>
+                            <ul class="clearfix pl-0">
+                              <li><span><i class="fa fa-wheelchair" aria-hidden="true"></i></span>Terminal Pickup</li>
+                              <li><span><i class="fa fa-smile-o" aria-hidden="true"></i></span>Meet and Greet</li>
+                             
+                            </ul>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+             <div class="CarDetailRight col-sm-12 col-md-12 col-lg-3 col-xl-3">
+               <div class = "RightMainDiv">
+                 <h6>Location:</h6>
+                 <p>New York: JFK International Airport Federal Circle Bldf. 312, Jamaica, NY (NY), United States, 11430</p>
+                 <h5>Pick Up:</h5>
+                 <ul class="pl-0">
+                   <li><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>JFK International Airport</li>
+                   <li><span><i class="fa fa-calendar" aria-hidden="true"></i></span>Sunday, April 13 2014</li>
+                   <li><span><i class="fa fa-clock-o" aria-hidden="true"></i></span>12:00 AM</li>
+                 </ul>
+                <h5>Drop Off:</h5>
+                 <ul class="pl-0">
+                   <li><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>JFK International Airport</li>
+                   <li><span><i class="fa fa-calendar" aria-hidden="true"></i></span>Sunday, April 20 2014</li>
+                   <li><span><i class="fa fa-clock-o" aria-hidden="true"></i></span>12:00 AM</li>
+                 </ul>
+                 <a class="btn color-second" href="#">Change Location & Date</a>
+               </div>
+             </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- Footer Start -->
+  <section id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3  col-sm-12 "> 
+            <div class="logos  ">
+              <img src="img/TrawelLogo.png">
+            </div>
+            <small class="f1">Booking, reviews and advices on hotels, resorts,<br> flights, vacation rentals, travel packages, and lots<br> more!</small>
+            <div class="logolarXirdaYumru">
+              <ul class="list list-horizontal list-space"> 
+                
+                <li>  <a href="" class="fa fa-facebook box-icon-normal round animate-icon-bottom-to-top"></a></li>
+                
+                 
+                <li>  <a href="" class="fa fa-twitter box-icon-normal round animate-icon-bottom-to-top"></a></li>
+                
+                 
+                <li>  <a href="" class="fa fa-google-plus box-icon-normal round animate-icon-bottom-to-top"></a></li>
+                
+                 
+                <li>  <a href="" class="fa fa-linkedin box-icon-normal round animate-icon-bottom-to-top"></a></li>
+                
+                 
+                 <li> <a href="" class="fa fa-pinterest box-icon-normal round animate-icon-bottom-to-top"></a></li>
+                
+              </ul>
+            </div>
+          </div> 
+           <div class="col-md-3 col-sm-12"> 
+            <div>
+              <h4>Newsletter</h4>
+              <small>Enter your E-mail Address</small>
+              <input type="" name="" class="form-control NewsletterInput">
+              <small style="display: block; color: #818181 ;font-size: 10px;"> *We Never Send Spam</small>
+              <input type="submit" name="" value="Subscribe" class="btn color-second borderC">
+
+            </div>
+          </div> 
+           <div class="col-md-2 col-sm-12"> 
+            <div class="linkss">
+                 <ul>
+                <li>
+                  <a href="">About Us</a>
+                </li>
+                 <li>
+                  <a href="">Press Centre</a>
+                </li>
+                 <li>
+                  <a href="">Best Price Guarantee</a>
+                </li>
+                 <li>
+                  <a href="">Travel News</a>
+                </li>
+                 <li>
+                  <a href="">Jobs</a>
+                </li>
+                <li>
+                  <a href="">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="">Terms of Use</a>
+                </li>
+                <li>
+                  <a href="">Feedback</a>
+                </li>
+              </ul>
+            </div>
+          </div> 
+           <div class="footerA col-md-4 col-sm-12"> 
+            <div>
+              <h4>Have Questions?</h4>
+              <h3>+1-202-555-0173 </h3>
+              <a href="#" style="color: #1AAEF2; margin-bottom: 10px; ">support@traveler.com</a>
+              
+              <small class="small2">24/7 Dedicated Customer Support</small>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </section>
+
+<!-- Footer END -->
+  
+ <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    
+    <script src="plugin/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="plugin/script.js"></script>
+         <script src="plugin/picker/pikaday.js"></script>
+    <script src="plugin/picker/custom.js">  </script>
+
+     <script src="js/ion.rangeSlider.js"></script>
+    <script src="js/bootstrap-datepicker.js" type="text/javascript" charset="utf-8" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <script src="js/script.js" type="text/javascript" charset="utf-8" async defer></script>
+
+</body>
+</html>
